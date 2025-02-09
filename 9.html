@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Q&A</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .question {
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .answer {
+            display: none;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        button {
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <h2>Interactive Question & Answer</h2>
+    
+<div>
+    <p class="question">What is Artificial Intelligence (AI)?</p>
+    <button onclick="toggleAnswer('answer1')">Show Answer</button>
+    <p id="answer1" class="answer">AI is the simulation of human intelligence in machines, enabling them to think, learn, and perform tasks like humans.</p>
+</div>
+<div>
+    <p class="question">What fields are included under the umbrella term AI?</p>
+    <button onclick="toggleAnswer('answer2')">Show Answer</button>
+    <p id="answer2" class="answer">AI includes various fields such as Machine Learning (ML), Deep Learning (DL), Natural Language Processing (NLP), Robotics, and more.</p>
+</div>
+<div>
+    <p class="question">Why is it important to learn about AI?</p>
+    <button onclick="toggleAnswer('answer3')">Show Answer</button>
+    <p id="answer3" class="answer">AI enables the creation of software and devices that can solve real-world problems, create virtual assistants, and develop robots for hazardous environments.</p>
+</div>
+<div>
+    <p class="question">What are the main goals of Artificial Intelligence?</p>
+    <button onclick="toggleAnswer('answer4')">Show Answer</button>
+    <p id="answer4" class="answer">The main goals include replicating human intelligence, solving knowledge-intensive tasks, and building systems that can learn and exhibit intelligent behavior.</p>
+</div>
+<div>
+    <p class="question">What historical figures contributed to the foundation of AI?</p>
+    <button onclick="toggleAnswer('answer5')">Show Answer</button>
+    <p id="answer5" class="answer">Figures like Aristotle, Ramon Llull, Charles Babbage, and Ada Lovelace laid the groundwork for AI by exploring human thinking and early computing concepts.</p>
+</div>
+<div>
+    <p class="question">What significant milestone occurred in the 1950s related to AI?</p>
+    <button onclick="toggleAnswer('answer6')">Show Answer</button>
+    <p id="answer6" class="answer">In the 1950s, the term "artificial intelligence" was coined during a Dartmouth College meeting, and the first AI program, the Logic Theorist, was introduced.</p>
+</div>
+<div>
+    <p class="question">What was a major achievement of AI in 1997?</p>
+    <button onclick="toggleAnswer('answer7')">Show Answer</button>
+    <p id="answer7" class="answer">In 1997, IBM's Deep Blue defeated chess champion Garry Kasparov, marking a significant moment in AI history.</p>
+</div>
+<div>
+    <p class="question">What is Weak AI or Narrow AI?</p>
+    <button onclick="toggleAnswer('answer8')">Show Answer</button>
+    <p id="answer8" class="answer">Weak AI, or Narrow AI, specializes in performing one specific task, such as Apple's Siri, which excels at voice commands but lacks broader understanding.</p>
+</div>
+<div>
+    <p class="question">What is the goal of General AI?</p>
+    <button onclick="toggleAnswer('answer9')">Show Answer</button>
+    <p id="answer9" class="answer">The goal of General AI is to create systems that can perform any task requiring human-like thinking and learning, but such systems do not yet exist.</p>
+</div>
+<div>
+    <p class="question">What are Reactive Machines in AI?</p>
+    <button onclick="toggleAnswer('answer10')">Show Answer</button>
+    <p id="answer10" class="answer">Reactive Machines are the simplest form of AI that only respond to present inputs without any memory of past experiences, such as IBM's Deep Blue.</p>
+</div>
+<div>
+    <p class="question">What is Limited Memory AI?</p>
+    <button onclick="toggleAnswer('answer11')">Show Answer</button>
+    <p id="answer11" class="answer">Limited Memory AI can remember certain past events for a short time, using this information for decision-making, like self-driving cars.</p>
+</div>
+<div>
+    <p class="question">What is the Theory of Mind in AI?</p>
+    <button onclick="toggleAnswer('answer12')">Show Answer</button>
+    <p id="answer12" class="answer">Theory of Mind AI aims to understand human emotions and social behaviors, allowing for more human-like interactions, but it is still in development.</p>
+</div>
+<div>
+    <p class="question">What does Self-Awareness in AI entail?</p>
+    <button onclick="toggleAnswer('answer13')">Show Answer</button>
+    <p id="answer13" class="answer">Self-Aware AI would possess its own consciousness and understanding of itself, but this level of AI does not currently exist and requires significant advancements.</p>
+</div>
+<div>
+    <p class="question">What is Machine Learning (ML)?</p>
+    <button onclick="toggleAnswer('answer14')">Show Answer</button>
+    <p id="answer14" class="answer">ML is a subset of AI where machines learn from data to improve their performance over time without being explicitly programmed.</p>
+</div>
+<div>
+    <p class="question">What are the types of Machine Learning?</p>
+    <button onclick="toggleAnswer('answer15')">Show Answer</button>
+    <p id="answer15" class="answer">Types include Supervised Learning, Unsupervised Learning, and Reinforcement Learning.</p>
+</div>
+<div>
+    <p class="question">What is Deep Learning?</p>
+    <button onclick="toggleAnswer('answer16')">Show Answer</button>
+    <p id="answer16" class="answer">Deep Learning is a subset of ML that uses neural networks with many layers to analyze complex patterns in large datasets.</p>
+</div>
+<div>
+    <p class="question">What are Convolutional Neural Networks (CNNs) used for?</p>
+    <button onclick="toggleAnswer('answer17')">Show Answer</button>
+    <p id="answer17" class="answer">CNNs are primarily used in image processing tasks, such as object detection and facial recognition.</p>
+</div>
+<div>
+    <p class="question">What is the difference between Machine Learning and Deep Learning?</p>
+    <button onclick="toggleAnswer('answer18')">Show Answer</button>
+    <p id="answer18" class="answer">Machine Learning works best with smaller datasets and simpler models, while Deep Learning excels with large datasets and can automatically extract features from raw data.</p>
+</div>
+<div>
+    <p class="question">What is Generative AI?</p>
+    <button onclick="toggleAnswer('answer19')">Show Answer</button>
+    <p id="answer19" class="answer">Generative AI refers to models that generate new content, such as images, music, or text, based on learned patterns from existing data.</p>
+</div>
+<div>
+    <p class="question">What are Large Language Models (LLMs)?</p>
+    <button onclick="toggleAnswer('answer20')">Show Answer</button>
+    <p id="answer20" class="answer">LLMs are deep learning models trained on vast amounts of text data to understand and generate human language, like GPT-3 and ChatGPT.</p>
+</div>
+<div>
+    <p class="question">What are some applications of AI in healthcare?</p>
+    <button onclick="toggleAnswer('answer21')">Show Answer</button>
+    <p id="answer21" class="answer">Applications include predicting diseases, medical imaging, and personalized treatment plans.</p>
+</div>
+<div>
+    <p class="question">How is AI used in finance?</p>
+    <button onclick="toggleAnswer('answer22')">Show Answer</button>
+    <p id="answer22" class="answer">AI is used for fraud detection, stock market predictions, and personal finance management.</p>
+</div>
+<div>
+    <p class="question">What role does AI play in autonomous vehicles?</p>
+    <button onclick="toggleAnswer('answer23')">Show Answer</button>
+    <p id="answer23" class="answer">AI enables self-driving cars to navigate, recognize obstacles, and make decisions in real-time.</p>
+</div>
+<div>
+    <p class="question">What are some AI tools in today's world?</p>
+    <button onclick="toggleAnswer('answer24')">Show Answer</button>
+    <p id="answer24" class="answer">Tools include image-to-text APIs, video editing AI, chatbots, recommendation engines, and virtual assistants.</p>
+</div>
+<div>
+    <p class="question">What is the significance of AI in content creation?</p>
+    <button onclick="toggleAnswer('answer25')">Show Answer</button>
+    <p id="answer25" class="answer">AI is used for generating images, music, and text, enhancing creative processes and efficiency.</p>
+</div>
+<div>
+    <p class="question">What challenges exist in the development of AI technologies?</p>
+    <button onclick="toggleAnswer('answer26')">Show Answer</button>
+    <p id="answer26" class="answer">Challenges include ensuring accuracy, ethical considerations, and addressing biases in AI models.</p>
+</div>
+<div>
+    <p class="question">What is the future potential of AI?</p>
+    <button onclick="toggleAnswer('answer27')">Show Answer</button>
+    <p id="answer27" class="answer">The future potential includes advancements in automation, personalized experiences, and new applications across various industries.</p>
+</div>
+<div>
+    <p class="question">How does AI open new opportunities?</p>
+    <button onclick="toggleAnswer('answer28')">Show Answer</button>
+    <p id="answer28" class="answer">AI opens new opportunities by enabling innovative technologies, improving efficiency, and creating new markets and job roles.</p>
+</div>
+<div>
+    <p class="question">What is an example of a Generative AI application?</p>
+    <button onclick="toggleAnswer('answer29')">Show Answer</button>
+    <p id="answer29" class="answer">An example is GPT (Generative Pretrained Transformer), which can generate text like essays and poetry based on prompts.</p>
+</div>
+<div>
+    <p class="question">What advancements in AI were seen in the 2020s?</p>
+    <button onclick="toggleAnswer('answer30')">Show Answer</button>
+    <p id="answer30" class="answer">The 2020s saw the rise of generative AI models like ChatGPT-3 and Google's Bard, capable of creating diverse content based on user prompts.</p>
+</div>
+
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            if (answer.style.display === "none" || answer.style.display === "") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

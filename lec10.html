@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-theme">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutech Learnings</title>
+   
+
+    <style>
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --text-primary: #333333;
+            --text-secondary: #666666;
+            --card-bg: #ffffff;
+            --nav-border: #eee;
+            --shadow: rgba(0,0,0,0.1);
+            --hover-shadow: rgba(0,0,0,0.15);
+        }
+@media (max-width: 600px) {
+    .search-bar {
+        display: none;
+    }
+    
+    nav {
+        background: none;
+    }
+
+    .btn-signup,
+    .btn-login {
+        display: none;
+    }
+}
+
+        .dark-theme {
+            --bg-primary: #1a1a1a;
+            --bg-secondary: #2d2d2d;
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --card-bg: #2d2d2d;
+            --nav-border: #333;
+            --shadow: rgba(0,0,0,0.3);
+            --hover-shadow: rgba(255,255,255,0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            transition: background-color 0.3s ease;
+        }
+        .nav-links a {
+        text-decoration: none;
+        color: var(--text-secondary);
+        font-weight: 500;
+        transition: color 0.3s ease, transform 0.2s ease;
+    }
+
+    .nav-links a:hover {
+       color: var(--text-primary);
+    transform: scale(1.1) translateY(-2px);
+      background: #00ff00; /* Green background on hover */
+                color: #050801;
+                box-shadow: 0 0 5px #00ff00,
+                            0 0 25px #00ff00,
+                            0 0 50px #00ff00,
+                            0 0 200px #00ff00;
+                -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+    }
+
+        nav {
+            padding: 1rem;
+            border-bottom: 1px solid var(--nav-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--bg-secondary);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--text-primary);
+        }
+        .logo:hover{
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffffff;
+            background: linear-gradient(to right, #4d4d4d 0%, white 10%, #4d4d4d 20%);
+            background-position: 0;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 3s infinite linear;
+            animation-fill-mode: forwards;
+            -webkit-text-size-adjust: none;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        @keyframes shine {
+            0% {
+                background-position: 0;
+            }
+            60% {
+                background-position: 180px;
+            }
+            100% {
+                background-position: 180px;
+            }
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            color: var(--text-secondary);
+        }
+
+        .nav-right {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .search-bar {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--nav-border);
+            border-radius: 4px;
+            width: 300px;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+        }
+
+        .theme-toggle {
+            padding: 0.5rem;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+        }
+
+        .btn {
+            padding: 0.5rem 1.5rem;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px var(--shadow);
+            background: #00ff00; /* Green background on hover */
+                color: #050801;
+                box-shadow: 0 0 5px #00ff00,
+                            0 0 25px #00ff00,
+                            0 0 50px #00ff00,
+                            0 0 200px #00ff00;
+        }
+
+        .btn-signup {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            border: 1px solid var(--text-secondary);
+        }
+
+        .btn-login {
+            background: #69B550;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+
+        h1 {
+            font-size: 2rem;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+
+        }
+
+        .subjects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .subject-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            
+            position: relative;
+            overflow: hidden;
+             transition: transform 0.3s ease; /* Transition for scaling */
+             box-shadow: 0 0 5px #00ff00;
+        }
+
+        .subject-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+    
+             background: #00ff00; /* Neon background color */
+            transform: translateX(-100%); /* Start off-screen to the left */
+            transition: transform 0.6s ease; /* Smooth transition */
+            z-index: 0; /* Ensure it sits behind the card content */
+        }
+         @keyframes neon {
+            0% {
+                box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
+            }
+            100% {
+                box-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 100px #00ff00;
+            }
+        }
+
+        .subject-card:hover {
+  transform: translateY(-10px) scale(1.02); /* Move and scale */
+            animation: neon 1.5s ease-in-out infinite alternate; /* Pulsing glow */
+            color: #050801; /* Original text color */
+
+}
+
+
+        .subject-card:hover::before {
+            transform: translateX(0);
+        }
+
+        .subject-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .subject-card:hover .subject-icon {
+            transform: rotate(360deg) scale(1.1);
+        }
+
+        .physics { background: #FFA726; }
+        .chemistry { background: #EF5350; }
+        .maths { background: #29B6F6; }
+        .biology { background: #66BB6A; }
+        .english { background: #D4A276; }
+        .economics { background: #26A69A; }
+        .history { background: #EC407A; }
+        .science { background: #7E57C2; }
+        .civics { background: #26C6DA; }
+        .geography { background: #FF7043; }
+        .polsci { background: #26C6DA; }
+        .evs { background: #66BB6A; }
+
+        .subject-name {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .subject-card:hover .subject-name {
+            transform: scale(1.1);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .subject-card:hover .subject-icon {
+            animation: pulse 1s infinite;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">NUTECH LEARNINGS</div>
+    
+        <div class="nav-right">
+            <input type="text" placeholder="Search for a topic" class="search-bar">
+            <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+            <button class="btn btn-signup">SIGNUP</button>
+            <button class="btn btn-login">LOGIN</button>
+        </div>
+    </nav>
+
+   <div class="container">
+    <h1>LECTURE # 10</h1>
+    <div class="subjects-grid">
+        <a href="ict\Lecture 10.pptx" class="subject-card" style="text-decoration: none; color: inherit; display: block;">
+            <div class="subject-icon physics">🪐</div>
+            <div class="subject-name">Official PDF</div>
+        </a>
+
+        <a href="10.html" class="subject-card" style="text-decoration: none; color: inherit; display: block;">
+            <div class="subject-icon chemistry">🔬</div>
+            <div class="subject-name">Test Questions </div>
+        </a>
+
+        <a href="https://you.com" class="subject-card" style="text-decoration: none; color: inherit; display: block;">
+            <div class="subject-icon maths">📊</div>
+            <div class="subject-name">Ask Anything</div>
+        </a>
+
+        <a href="your-link-here" class="subject-card" style="text-decoration: none; color: inherit; display: block;">
+            <div class="subject-icon biology">🌿</div>
+            <div class="subject-name">Other Stuff</div>
+        </a>
+
+        <a href="your-link-here" class="subject-card" style="text-decoration: none; color: inherit; display: block;">
+            <div class="subject-icon english">📖</div>
+            <div class="subject-name">Miscellaneous</div>
+        </a>
+
+        
+    </div>
+</div>
+
+    <script>
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Q&A</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .question {
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .answer {
+            display: none;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        button {
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <h2>Interactive Question & Answer</h2>
+    
+    <div>
+    <p class="question">What is Microsoft Office?</p>
+    <button onclick="toggleAnswer('answer1')">Show Answer</button>
+    <p id="answer1" class="answer">Microsoft Office is a suite of productivity software launched by Microsoft in 1989. It includes applications like MS Word, MS Excel, and MS PowerPoint, designed for tasks such as word processing, spreadsheets, and presentations.</p>
+</div>
+
+<div>
+    <p class="question">What are the main applications in Microsoft Office?</p>
+    <button onclick="toggleAnswer('answer2')">Show Answer</button>
+    <p id="answer2" class="answer">The main applications in Microsoft Office include MS Word, MS Excel, MS PowerPoint, MS Access, Outlook, and Publisher.</p>
+</div>
+
+<div>
+    <p class="question">What is MS Word used for?</p>
+    <button onclick="toggleAnswer('answer3')">Show Answer</button>
+    <p id="answer3" class="answer">MS Word is a word processing application used for creating, editing, and formatting text-based documents such as letters, resumes, research papers, and reports.</p>
+</div>
+
+<div>
+    <p class="question">What is the Format Painter in MS Word?</p>
+    <button onclick="toggleAnswer('answer4')">Show Answer</button>
+    <p id="answer4" class="answer">The Format Painter is a tool in MS Word that allows users to copy the formatting of selected text or objects and apply it to other text or objects within the document. The shortcut is Ctrl + Shift + C to copy formatting and Ctrl + Shift + V to apply it.</p>
+</div>
+
+<div>
+    <p class="question">What are the different document views in MS Word?</p>
+    <button onclick="toggleAnswer('answer5')">Show Answer</button>
+    <p id="answer5" class="answer">MS Word offers multiple document views, including Print Layout (default view), Web Layout, Outline View, and Draft View. The shortcut for Print Layout is Alt + W then P.</p>
+</div>
+
+<div>
+    <p class="question">What are headers and footers in MS Word?</p>
+    <button onclick="toggleAnswer('answer6')">Show Answer</button>
+    <p id="answer6" class="answer">Headers appear at the top, and footers appear at the bottom of each page. They are used to include elements like page numbers, document titles, or author names. The shortcut for headers is Alt + N then H, and for footers, it is Alt + N then O.</p>
+</div>
+
+<div>
+    <p class="question">What is a watermark in MS Word?</p>
+    <button onclick="toggleAnswer('answer7')">Show Answer</button>
+    <p id="answer7" class="answer">A watermark is a semi-transparent text or image displayed behind the document content, often used to label documents as "Confidential" or "Draft." It can be accessed in the Design tab with the shortcut Alt + G then W.</p>
+</div>
+
+<div>
+    <p class="question">What are the shortcuts for Undo and Redo in MS Word?</p>
+    <button onclick="toggleAnswer('answer8')">Show Answer</button>
+    <p id="answer8" class="answer">The shortcut for Undo is Ctrl + Z, and for Redo, it is Ctrl + Y.</p>
+</div>
+
+<div>
+    <p class="question">What are the shortcuts for Copy, Paste, and Cut in MS Word?</p>
+    <button onclick="toggleAnswer('answer9')">Show Answer</button>
+    <p id="answer9" class="answer">The shortcut for Copy is Ctrl + C, for Paste is Ctrl + V, and for Cut is Ctrl + X.</p>
+</div>
+
+<div>
+    <p class="question">What are the text alignment options in MS Word?</p>
+    <button onclick="toggleAnswer('answer10')">Show Answer</button>
+    <p id="answer10" class="answer">Text alignment options in MS Word include left (Ctrl + L), center (Ctrl + E), right (Ctrl + R), and justify (Ctrl + J).</p>
+</div>
+
+<div>
+    <p class="question">What are footnotes and endnotes in MS Word?</p>
+    <button onclick="toggleAnswer('answer11')">Show Answer</button>
+    <p id="answer11" class="answer">Footnotes appear at the bottom of the page, while endnotes appear at the end of the document or section. They are used for additional information, explanations, or citations. The shortcut for inserting a footnote is Alt + S then F.</p>
+</div>
+
+<div>
+    <p class="question">What is a Table of Contents in MS Word?</p>
+    <button onclick="toggleAnswer('answer12')">Show Answer</button>
+    <p id="answer12" class="answer">A Table of Contents is an automatic summary of headings and subheadings within a document, allowing for easy navigation. It can be accessed in the References tab with the shortcut Alt + S then T.</p>
+</div>
+
+<div>
+    <p class="question">What is the Find and Replace feature in MS Word?</p>
+    <button onclick="toggleAnswer('answer13')">Show Answer</button>
+    <p id="answer13" class="answer">Find and Replace allows users to locate specific words or phrases (Ctrl + F) and replace them with another word or phrase (Ctrl + H) throughout the document.</p>
+</div>
+
+<div>
+    <p class="question">What are page setup options in MS Word?</p>
+    <button onclick="toggleAnswer('answer14')">Show Answer</button>
+    <p id="answer14" class="answer">Page setup options in MS Word include margins, orientation (portrait or landscape), and columns. The shortcut for Page Setup is Alt + P then M for Margins.</p>
+</div>
+
+<div>
+    <p class="question">What are page breaks and section breaks in MS Word?</p>
+    <button onclick="toggleAnswer('answer15')">Show Answer</button>
+    <p id="answer15" class="answer">A page break moves content to the next page, while a section break divides a document into sections, allowing for different formatting in each section. The shortcut for a page break is Ctrl + Enter.</p>
+</div>
+
+<div>
+    <p class="question">What is SmartArt in MS Word?</p>
+    <button onclick="toggleAnswer('answer16')">Show Answer</button>
+    <p id="answer16" class="answer">SmartArt is a feature in MS Word that provides pre-designed graphics for displaying information visually, such as flowcharts and organizational charts. It can be accessed under the Insert tab.</p>
+</div>
+
+<div>
+    <p class="question">What is MS PowerPoint used for?</p>
+    <button onclick="toggleAnswer('answer17')">Show Answer</button>
+    <p id="answer17" class="answer">MS PowerPoint is a presentation software used to create slideshows composed of text, images, charts, animations, and multimedia. It is widely used in business, education, and personal presentations.</p>
+</div>
+
+<div>
+    <p class="question">What is a slide in MS PowerPoint?</p>
+    <button onclick="toggleAnswer('answer18')">Show Answer</button>
+    <p id="answer18" class="answer">A slide is a single page within a PowerPoint presentation where content is added. The shortcut to insert a new slide is Ctrl + M.</p>
+</div>
+
+<div>
+    <p class="question">What is a slide layout in MS PowerPoint?</p>
+    <button onclick="toggleAnswer('answer19')">Show Answer</button>
+    <p id="answer19" class="answer">A slide layout is a predefined arrangement of text boxes and content placeholders within a slide. The shortcut to open layout options is Ctrl + Shift + L.</p>
+</div>
+
+<div>
+    <p class="question">What is the Notes Pane in MS PowerPoint?</p>
+    <button onclick="toggleAnswer('answer20')">Show Answer</button>
+    <p id="answer20" class="answer">The Notes Pane is a space at the bottom of each slide to add notes visible only to the presenter. It is useful for adding additional points or reminders during a presentation.</p>
+</div>
+
+<div>
+    <p class="question">What are transition effects in MS PowerPoint?</p>
+    <button onclick="toggleAnswer('answer21')">Show Answer</button>
+    <p id="answer21" class="answer">Transition effects are visual effects applied when moving from one slide to another, such as Fade, Push, and Wipe. They enhance the flow of the presentation.</p>
+</div>
+
+<div>
+    <p class="question">What are animations in MS PowerPoint?</p>
+    <button onclick="toggleAnswer('answer22')">Show Answer</button>
+    <p id="answer22" class="answer">Animations are effects applied to individual elements within a slide, such as text boxes, images, and charts. They can be accessed with the shortcut Alt + A.</p>
+</div>
+
+<div>
+    <p class="question">What is the Animation Pane in MS PowerPoint?</p>
+    <button onclick="toggleAnswer('answer23')">Show Answer</button>
+    <p id="answer23" class="answer">The Animation Pane is a tool within the Animations tab that provides a timeline of all animations on the slide, allowing fine-tuning of timing, order, and effects.</p>
+</div>
+
+<div>
+    <p class="question">What is Presenter View in MS PowerPoint?</p>
+    <button onclick="toggleAnswer('answer24')">Show Answer</button>
+    <p id="answer24" class="answer">Presenter View is a display mode that shows the current slide, next slide, notes, and a timer, helping presenters stay organized. The shortcut to start Presenter View is Alt + F5.</p>
+</div>
+
+<div>
+    <p class="question">What is Slide Sorter View in MS PowerPoint?</p>
+    <button onclick="toggleAnswer('answer25')">Show Answer</button>
+    <p id="answer25" class="answer">Slide Sorter View displays all slides as thumbnails, allowing for easy rearrangement and overview. The shortcut is Alt + W then I.</p>
+</div>
+
+<div>
+    <p class="question">What is Reading View in MS PowerPoint?</p>
+    <button onclick="toggleAnswer('answer26')">Show Answer</button>
+    <p id="answer26" class="answer">Reading View is a full-screen view that shows the slides without switching to a full presentation mode. The shortcut is Alt + W then D.</p>
+</div>
+
+<div>
+    <p class="question">What is Slide Master in MS PowerPoint?</p>
+    <button onclick="toggleAnswer('answer27')">Show Answer</button>
+    <p id="answer27" class="answer">Slide Master is a master slide that controls the layout, fonts, colors, and effects for all slides in a presentation. It ensures consistency across slides and can be accessed under the View tab.</p>
+</div>
+
+<div>
+    <p class="question">What is MS Excel used for?</p>
+    <button onclick="toggleAnswer('answer28')">Show Answer</button>
+    <p id="answer28" class="answer">MS Excel is a spreadsheet software used for data organization, calculation, and analysis. It is essential for tasks involving data tracking, statistical analysis, and graphical representation.</p>
+</div>
+
+<div>
+    <p class="question">What is a workbook in MS Excel?</p>
+    <button onclick="toggleAnswer('answer29')">Show Answer</button>
+    <p id="answer29" class="answer">A workbook is the entire Excel file containing multiple worksheets. The shortcut to create a new workbook is Ctrl + N.</p>
+</div>
+
+<div>
+    <p class="question">What is a worksheet in MS Excel?</p>
+    <button onclick="toggleAnswer('answer30')">Show Answer</button>
+    <p id="answer30" class="answer">A worksheet is a single spreadsheet within a workbook, organized into cells in rows and columns. The shortcut to add a new worksheet is Shift + F11.</p>
+</div>
+
+<div>
+    <p class="question">What is a cell in MS Excel?</p>
+    <button onclick="toggleAnswer('answer31')">Show Answer</button>
+    <p id="answer31" class="answer">A cell is the basic unit in a worksheet where data is entered, identified by a column letter and row number (e.g., A1).</p>
+</div>
+
+<div>
+    <p class="question">What is a formula in MS Excel?</p>
+    <button onclick="toggleAnswer('answer32')">Show Answer</button>
+    <p id="answer32" class="answer">A formula is a custom calculation created by the user starting with an equals sign (e.g., =A1+B1).</p>
+</div>
+
+<div>
+    <p class="question">What is Conditional Formatting in MS Excel?</p>
+    <button onclick="toggleAnswer('answer33')">Show Answer</button>
+    <p id="answer33" class="answer">Conditional Formatting changes the appearance of cells based on specific conditions, such as highlighting cells above a certain value. The shortcut is Alt + H then L.</p>
+</div>
+
+<div>
+    <p class="question">What is a Pivot Table in MS Excel?</p>
+    <button onclick="toggleAnswer('answer34')">Show Answer</button>
+    <p id="answer34" class="answer">A Pivot Table is a tool for summarizing and analyzing large datasets by grouping data and creating reports. The shortcut to insert a Pivot Table is Alt + N then V.</p>
+</div>
+
+<div>
+    <p class="question">What are charts in MS Excel?</p>
+    <button onclick="toggleAnswer('answer35')">Show Answer</button>
+    <p id="answer35" class="answer">Charts are visual representations of data, including bar charts, line graphs, and pie charts. The shortcut to create a chart is Alt + F1, or F11 for a chart in a new sheet.</p>
+</div>
+
+<div>
+    <p class="question">What is MS Access used for?</p>
+    <button onclick="toggleAnswer('answer36')">Show Answer</button>
+    <p id="answer36" class="answer">MS Access is a database management tool used for creating, managing, and manipulating data in a structured way. It is ideal for data storage, reporting, and analysis.</p>
+</div>
+
+<div>
+    <p class="question">What is a database in MS Access?</p>
+    <button onclick="toggleAnswer('answer37')">Show Answer</button>
+    <p id="answer37" class="answer">A database in MS Access is a structured set of data managed within Access, often saved as .accdb files. It includes tables, queries, forms, and reports.</p>
+</div>
+
+<div>
+    <p class="question">What is a table in MS Access?</p>
+    <button onclick="toggleAnswer('answer38')">Show Answer</button>
+    <p id="answer38" class="answer">A table in MS Access is a structured set of data organized into rows and columns. Each row is a record, and each column is a field that stores a particular type of data.</p>
+</div>
+
+<div>
+    <p class="question">What is a primary key in MS Access?</p>
+    <button onclick="toggleAnswer('answer39')">Show Answer</button>
+    <p id="answer39" class="answer">A primary key is a field or combination of fields in a table that uniquely identifies each record. It ensures no duplicate data within that field.</p>
+</div>
+
+<div>
+    <p class="question">What is a foreign key in MS Access?</p>
+    <button onclick="toggleAnswer('answer40')">Show Answer</button>
+    <p id="answer40" class="answer">A foreign key is a field in one table that links to the primary key in another table, establishing a relationship between tables.</p>
+</div>
+
+<div>
+    <p class="question">What are relationships in MS Access?</p>
+    <button onclick="toggleAnswer('answer41')">Show Answer</button>
+    <p id="answer41" class="answer">Relationships in MS Access define how tables are connected through primary and foreign keys. The main types are one-to-one, one-to-many, and many-to-many.</p>
+</div>
+
+<div>
+    <p class="question">What is referential integrity in MS Access?</p>
+    <button onclick="toggleAnswer('answer42')">Show Answer</button>
+    <p id="answer42" class="answer">Referential integrity ensures the accuracy and consistency of data within relationships. It prevents deletion of a record in the primary table if related records exist in a linked table.</p>
+</div>
+
+<div>
+    <p class="question">What is Cascade Update in MS Access?</p>
+    <button onclick="toggleAnswer('answer43')">Show Answer</button>
+    <p id="answer43" class="answer">Cascade Update automatically updates all linked foreign keys in related tables when the primary key in the main table is updated.</p>
+</div>
+
+<div>
+    <p class="question">What is Cascade Delete in MS Access?</p>
+    <button onclick="toggleAnswer('answer44')">Show Answer</button>
+    <p id="answer44" class="answer">Cascade Delete automatically deletes all related records in linked tables when a record in the main table is deleted.</p>
+</div>
+
+<div>
+    <p class="question">What is a form in MS Access?</p>
+    <button onclick="toggleAnswer('answer45')">Show Answer</button>
+    <p id="answer45" class="answer">A form in MS Access is a customizable interface for data entry, editing, and viewing in a user-friendly format. It can be created under the Create tab.</p>
+</div>
+
+<div>
+    <p class="question">What is a query in MS Access?</p>
+    <button onclick="toggleAnswer('answer46')">Show Answer</button>
+    <p id="answer46" class="answer">A query in MS Access is a request to extract, update, delete, or add data in one or more tables based on specified criteria. Types include Select, Update, Delete, and Append queries.</p>
+</div>
+
+<div>
+    <p class="question">What is a Select Query in MS Access?</p>
+    <button onclick="toggleAnswer('answer47')">Show Answer</button>
+    <p id="answer47" class="answer">A Select Query extracts specific data from tables based on set criteria. For example, retrieving all customers from the Customers table where the City is "New York."</p>
+</div>
+
+<div>
+    <p class="question">What is an Update Query in MS Access?</p>
+    <button onclick="toggleAnswer('answer48')">Show Answer</button>
+    <p id="answer48" class="answer">An Update Query modifies data in one or more records based on specified conditions. For example, increasing the Price of all products in the Products table by 10%.</p>
+</div>
+
+<div>
+    <p class="question">What is a Delete Query in MS Access?</p>
+    <button onclick="toggleAnswer('answer49')">Show Answer</button>
+    <p id="answer49" class="answer">A Delete Query removes records based on specified conditions. For example, deleting all customers from the Customers table whose Status is "Inactive."</p>
+</div>
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            if (answer.style.display === "none" || answer.style.display === "") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Q&A</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .question {
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .answer {
+            display: none;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        button {
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <h2>Interactive Question & Answer</h2>
+    
+    <div>
+    <p class="question">What is the course code and title?</p>
+    <button onclick="toggleAnswer('answer1')">Show Answer</button>
+    <p id="answer1" class="answer">The course code is GE100, and the title is "Application of Information and Communication Technologies."</p>
+</div>
+<div>
+    <p class="question">Who is the instructor for the course?</p>
+    <button onclick="toggleAnswer('answer2')">Show Answer</button>
+    <p id="answer2" class="answer">The instructor is Alina Maryum.</p>
+</div>
+<div>
+    <p class="question">Are there any prerequisites for this course?</p>
+    <button onclick="toggleAnswer('answer3')">Show Answer</button>
+    <p id="answer3" class="answer">No, there are no prerequisite courses.</p>
+</div>
+<div>
+    <p class="question">What are the key learning objectives of this course?</p>
+    <button onclick="toggleAnswer('answer4')">Show Answer</button>
+    <p id="answer4" class="answer">Students should be able to understand ICT fundamentals, explore computing history, analyze emerging technologies, create interactive websites, understand digital security, and handle data using software tools.</p>
+</div>
+<div>
+    <p class="question">Name the textbook recommended for this course.</p>
+    <button onclick="toggleAnswer('answer5')">Show Answer</button>
+    <p id="answer5" class="answer">"Understanding Computers: Today and Tomorrow" by Charles S. Parker.</p>
+</div>
+<div>
+    <p class="question">List some reference materials for this course.</p>
+    <button onclick="toggleAnswer('answer6')">Show Answer</button>
+    <p id="answer6" class="answer">- "An Introduction to Automatic Digital Computers" by Robert Kenneth Livesley.<br>- "Computer Fundamentals" (8th Edition) by Pradeep Sinha & Priti Sinha.<br>- "Exploring Four Decades of Research in Computers & Education" by Olaf Zawacki-Richter & Colin Latchem.</p>
+</div>
+<div>
+    <p class="question">What percentage of the total grade is assigned to quizzes?</p>
+    <button onclick="toggleAnswer('answer7')">Show Answer</button>
+    <p id="answer7" class="answer">Quizzes contribute 10% to the total grade.</p>
+</div>
+<div>
+    <p class="question">What is the weight of the final term exam in the overall assessment?</p>
+    <button onclick="toggleAnswer('answer8')">Show Answer</button>
+    <p id="answer8" class="answer">The final term exam accounts for 50% of the total grade.</p>
+</div>
+<div>
+    <p class="question">How much do assignments contribute to the final grade?</p>
+    <button onclick="toggleAnswer('answer9')">Show Answer</button>
+    <p id="answer9" class="answer">Assignments contribute 5% to the final grade.</p>
+</div>
+<div>
+    <p class="question">What is the weight of the midterm exam?</p>
+    <button onclick="toggleAnswer('answer10')">Show Answer</button>
+    <p id="answer10" class="answer">The midterm exam carries 30% weight.</p>
+</div>
+<div>
+    <p class="question">Why is it essential to learn about technology today?</p>
+    <button onclick="toggleAnswer('answer11')">Show Answer</button>
+    <p id="answer11" class="answer">Because computing devices are integrated into our business and personal lives.</p>
+</div>
+<div>
+    <p class="question">What is pervasive computing?</p>
+    <button onclick="toggleAnswer('answer12')">Show Answer</button>
+    <p id="answer12" class="answer">Also known as ubiquitous computing, it refers to the integration of computers into everyday objects and activities.</p>
+</div>
+<div>
+    <p class="question">What is basic computer literacy?</p>
+    <button onclick="toggleAnswer('answer13')">Show Answer</button>
+    <p id="answer13" class="answer">Understanding what a computer is and how it works.</p>
+</div>
+<div>
+    <p class="question">What were the characteristics of computers before 1980?</p>
+    <button onclick="toggleAnswer('answer14')">Show Answer</button>
+    <p id="answer14" class="answer">They were large, expensive, and used mainly for high-volume processing tasks.</p>
+</div>
+<div>
+    <p class="question">What was the significance of microcomputers in the early 1980s?</p>
+    <button onclick="toggleAnswer('answer15')">Show Answer</button>
+    <p id="answer15" class="answer">They made computers affordable, leading to increased usage.</p>
+</div>
+<div>
+    <p class="question">How many U.S. households had computers as of today?</p>
+    <button onclick="toggleAnswer('answer16')">Show Answer</button>
+    <p id="answer16" class="answer">Nearly 90% of U.S. households include a computer.</p>
+</div>
+<div>
+    <p class="question">How have electronic devices evolved?</p>
+    <button onclick="toggleAnswer('answer17')">Show Answer</button>
+    <p id="answer17" class="answer">Devices now converge multiple capabilities, such as checking emails on TVs and viewing the internet on mobile devices.</p>
+</div>
+<div>
+    <p class="question">Name some computing devices used in homes.</p>
+    <button onclick="toggleAnswer('answer18')">Show Answer</button>
+    <p id="answer18" class="answer">Smart appliances, smart homes, wireless networks, personal computers, and entertainment systems.</p>
+</div>
+<div>
+    <p class="question">How are computing devices used in education?</p>
+    <button onclick="toggleAnswer('answer19')">Show Answer</button>
+    <p id="answer19" class="answer">They are used in computer labs, classrooms, e-books, distance learning, and university enrollments.</p>
+</div>
+<div>
+    <p class="question">What is BYOD in education?</p>
+    <button onclick="toggleAnswer('answer20')">Show Answer</button>
+    <p id="answer20" class="answer">"Bring Your Own Device," where students bring their own laptops or tablets for learning.</p>
+</div>
+<div>
+    <p class="question">Name some job roles that require computers.</p>
+    <button onclick="toggleAnswer('answer21')">Show Answer</button>
+    <p id="answer21" class="answer">Decision-making, productivity, security, military, and professional services.</p>
+</div>
+<div>
+    <p class="question">How are computers used on the go?</p>
+    <button onclick="toggleAnswer('answer22')">Show Answer</button>
+    <p id="answer22" class="answer">Through kiosks, ATMs, POS systems, self-checkout, mobile devices, and GPS systems.</p>
+</div>
+<div>
+    <p class="question">Define a computer.</p>
+    <button onclick="toggleAnswer('answer23')">Show Answer</button>
+    <p id="answer23" class="answer">A programmable electronic device that processes, stores, and communicates data.</p>
+</div>
+<div>
+    <p class="question">What are the basic operations of a computer?</p>
+    <button onclick="toggleAnswer('answer24')">Show Answer</button>
+    <p id="answer24" class="answer">Input, processing, output, storage, and communication.</p>
+</div>
+<div>
+    <p class="question">What is the difference between data and information?</p>
+    <button onclick="toggleAnswer('answer25')">Show Answer</button>
+    <p id="answer25" class="answer">Data is raw, unorganized facts, while information is processed and meaningful data.</p>
+</div>
+<div>
+    <p class="question">What technology was used in first-generation computers?</p>
+    <button onclick="toggleAnswer('answer26')">Show Answer</button>
+    <p id="answer26" class="answer">Vacuum tubes.</p>
+</div>
+<div>
+    <p class="question">What replaced vacuum tubes in second-generation computers?</p>
+    <button onclick="toggleAnswer('answer27')">Show Answer</button>
+    <p id="answer27" class="answer">Transistors.</p>
+</div>
+<div>
+    <p class="question">What major advancement characterized third-generation computers?</p>
+    <button onclick="toggleAnswer('answer28')">Show Answer</button>
+    <p id="answer28" class="answer">The use of integrated circuits (ICs).</p>
+</div>
+<div>
+    <p class="question">What defines fourth-generation computers?</p>
+    <button onclick="toggleAnswer('answer29')">Show Answer</button>
+    <p id="answer29" class="answer">Microprocessors, networking, and modern input/output devices.</p>
+</div>
+<div>
+    <p class="question">What is the expected feature of fifth-generation computers?</p>
+    <button onclick="toggleAnswer('answer30')">Show Answer</button>
+    <p id="answer30" class="answer">Artificial intelligence (AI) and nanotechnology.</p>
+</div>
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            if (answer.style.display === "none" || answer.style.display === "") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

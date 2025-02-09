@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Q&A</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .question {
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .answer {
+            display: none;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        button {
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <h2>Interactive Question & Answer</h2>
+    <div>
+    <p class="question">What is an embedded computer?</p>
+    <button onclick="toggleAnswer('answer1')">Show Answer</button>
+    <p id="answer1" class="answer">An embedded computer is a tiny computer built into a product to perform specific tasks or functions for that product.</p>
+</div>
+<div>
+    <p class="question">What are some common examples of products that use embedded computers?</p>
+    <button onclick="toggleAnswer('answer2')">Show Answer</button>
+    <p id="answer2" class="answer">Common examples include household appliances, thermostats, answering machines, treadmills, sewing machines, DVD players, and televisions.</p>
+</div>
+<div>
+    <p class="question">How are embedded computers used in modern cars?</p>
+    <button onclick="toggleAnswer('answer3')">Show Answer</button>
+    <p id="answer3" class="answer">In cars, embedded computers are used for diagnostics, notifying users about conditions, managing navigation and entertainment systems, controlling safety devices, operating cameras, managing auto-braking systems, and enabling self-driving capabilities.</p>
+</div>
+<div>
+    <p class="question">What defines a mobile device?</p>
+    <button onclick="toggleAnswer('answer4')">Show Answer</button>
+    <p id="answer4" class="answer">A mobile device is a very small device with built-in computing or Internet capability, typically powered by rechargeable batteries and including wireless connectivity.</p>
+</div>
+<div>
+    <p class="question">What are the common uses of mobile devices?</p>
+    <button onclick="toggleAnswer('answer5')">Show Answer</button>
+    <p id="answer5" class="answer">Mobile devices are commonly used for voice and video calls, text messaging, web browsing, taking digital photos, gaming, streaming music and TV shows, calendar access, and social media access.</p>
+</div>
+<div>
+    <p class="question">What are the limitations of mobile devices?</p>
+    <button onclick="toggleAnswer('answer6')">Show Answer</button>
+    <p id="answer6" class="answer">Mobile devices typically have small screens and keyboards, making them more appropriate for quick information lookups rather than extensive web browsing or complex computing tasks.</p>
+</div>
+<div>
+    <p class="question">What are the three main categories of personal computers?</p>
+    <button onclick="toggleAnswer('answer7')">Show Answer</button>
+    <p id="answer7" class="answer">The three main categories are desktop computers, portable computers, and thin clients/internet appliances.</p>
+</div>
+<div>
+    <p class="question">What are the two main desktop computer platforms?</p>
+    <button onclick="toggleAnswer('answer8')">Show Answer</button>
+    <p id="answer8" class="answer">The two main platforms are PC-compatible (Windows PCs or IBM-compatible PCs) and Mac computers (made by Apple).</p>
+</div>
+<div>
+    <p class="question">What are the different types of portable computers?</p>
+    <button onclick="toggleAnswer('answer9')">Show Answer</button>
+    <p id="answer9" class="answer">The main types include notebook (laptop) computers, tablet computers, hybrid notebook-tablet computers, netbooks, and Chromebooks.</p>
+</div>
+<div>
+    <p class="question">What is a server?</p>
+    <button onclick="toggleAnswer('answer10')">Show Answer</button>
+    <p id="answer10" class="answer">A server is a computer used to host programs and data for a network, typically larger and more powerful than a desktop computer, serving many users simultaneously.</p>
+</div>
+<div>
+    <p class="question">What is virtualization in the context of servers?</p>
+    <button onclick="toggleAnswer('answer11')">Show Answer</button>
+    <p id="answer11" class="answer">Server virtualization is the creation of separate server environments that are physically located on the same computer but function as separate servers.</p>
+</div>
+<div>
+    <p class="question">What is a mainframe computer and who uses them?</p>
+    <button onclick="toggleAnswer('answer12')">Show Answer</button>
+    <p id="answer12" class="answer">A mainframe computer is a powerful computer used by large organizations to manage large amounts of data, commonly used by hospitals, universities, large businesses, banks, and government offices.</p>
+</div>
+<div>
+    <p class="question">What distinguishes supercomputers from other types of computers?</p>
+    <button onclick="toggleAnswer('answer13')">Show Answer</button>
+    <p id="answer13" class="answer">Supercomputers are the fastest, most expensive, and most powerful type of computers, generally running one program at maximum speed.</p>
+</div>
+<div>
+    <p class="question">What is cloud computing?</p>
+    <button onclick="toggleAnswer('answer14')">Show Answer</button>
+    <p id="answer14" class="answer">Cloud computing is accessing data and applications stored on computers available via the Internet rather than on users' local devices.</p>
+</div>
+<div>
+    <p class="question">What are the advantages and disadvantages of cloud computing?</p>
+    <button onclick="toggleAnswer('answer15')">Show Answer</button>
+    <p id="answer15" class="answer">Advantages include access to data from anywhere with an Internet connection and data safety if a device is lost. Disadvantages include limited functionality without Internet access and potential high expenses for data transfer.</p>
+</div>
+<div>
+    <p class="question">What is a thin client?</p>
+    <button onclick="toggleAnswer('answer16')">Show Answer</button>
+    <p id="answer16" class="answer">A thin client is a personal computer designed to access a network for processing and data storage, rather than performing those tasks locally.</p>
+</div>
+<div>
+    <p class="question">What is a Chromebook?</p>
+    <button onclick="toggleAnswer('answer17')">Show Answer</button>
+    <p id="answer17" class="answer">A Chromebook is a mobile thin client that runs the Chrome operating system, designed to be used with online apps and cloud storage.</p>
+</div>
+<div>
+    <p class="question">What is an internet appliance?</p>
+    <button onclick="toggleAnswer('answer18')">Show Answer</button>
+    <p id="answer18" class="answer">An internet appliance is a specialized network computer designed specifically for Internet access, such as smart TVs or gaming consoles.</p>
+</div>
+<div>
+    <p class="question">What is desktop virtualization?</p>
+    <button onclick="toggleAnswer('answer19')">Show Answer</button>
+    <p id="answer19" class="answer">Desktop virtualization separates a user's desktop environment from their physical computer, storing it on a central server.</p>
+</div>
+<div>
+    <p class="question">What makes workstations different from regular desktop computers?</p>
+    <button onclick="toggleAnswer('answer20')">Show Answer</button>
+    <p id="answer20" class="answer">Workstations are extra powerful desktop computers designed for demanding applications like graphics, music, film, architecture, and science.</p>
+</div>
+<div>
+    <p class="question">What is a subnotebook?</p>
+    <button onclick="toggleAnswer('answer21')">Show Answer</button>
+    <p id="answer21" class="answer">A subnotebook is a very thin and light notebook computer, also called an ultraportable.</p>
+</div>
+<div>
+    <p class="question">What's the difference between a tablet and a notebook computer?</p>
+    <button onclick="toggleAnswer('answer22')">Show Answer</button>
+    <p id="answer22" class="answer">Unlike notebooks, tablets don't have a physical keyboard and are designed to be used with a digital pen or touch input.</p>
+</div>
+<div>
+    <p class="question">How much processing power does a modern mainframe have?</p>
+    <button onclick="toggleAnswer('answer23')">Show Answer</button>
+    <p id="answer23" class="answer">Modern mainframes can support up to 8,000 virtual servers and process 2.5 billion transactions per day.</p>
+</div>
+<div>
+    <p class="question">What is the Titan supercomputer used for?</p>
+    <button onclick="toggleAnswer('answer24')">Show Answer</button>
+    <p id="answer24" class="answer">Titan is used for scientific research, including climate change and astrophysics, at the U.S. Department of Energy Oak Ridge National Laboratory.</p>
+</div>
+<div>
+    <p class="question">How big is the Titan supercomputer?</p>
+    <button onclick="toggleAnswer('answer25')">Show Answer</button>
+    <p id="answer25" class="answer">Titan occupies 4,352 square feet of floor space and contains more than 300,000 processors.</p>
+</div>
+<div>
+    <p class="question">What is special about hybrid notebook-tablet computers?</p>
+    <button onclick="toggleAnswer('answer26')">Show Answer</button>
+    <p id="answer26" class="answer">These devices can function as either a notebook or tablet computer, with some having detachable screens.</p>
+</div>
+<div>
+    <p class="question">What makes netbooks different from regular notebooks?</p>
+    <button onclick="toggleAnswer('answer27')">Show Answer</button>
+    <p id="answer27" class="answer">Netbooks are smaller than notebook computers and are designed primarily for accessing Internet-based applications.</p>
+</div>
+<div>
+    <p class="question">How do embedded computers help with car safety?</p>
+    <button onclick="toggleAnswer('answer28')">Show Answer</button>
+    <p id="answer28" class="answer">They control airbags, operate blind spot detection cameras, and manage auto-braking systems for collision prevention.</p>
+</div>
+<div>
+    <p class="question">What is the main limitation of thin clients?</p>
+    <button onclick="toggleAnswer('answer29')">Show Answer</button>
+    <p id="answer29" class="answer">Thin clients cannot function as computers if the network is down since they rely on network access for processing.</p>
+</div>
+<div>
+    <p class="question">What is unique about Mac computers compared to PC-compatible computers?</p>
+    <button onclick="toggleAnswer('answer30')">Show Answer</button>
+    <p id="answer30" class="answer">Mac computers are made exclusively by Apple and use the OS X operating system, while PC-compatible computers run Microsoft Windows.</p>
+</div>
+<div>
+    <p class="question">What makes mobile devices suitable for payments?</p>
+    <button onclick="toggleAnswer('answer31')">Show Answer</button>
+    <p id="answer31" class="answer">Mobile devices can be used to pay for purchases on the go and can perform tasks via voice commands.</p>
+</div>
+<div>
+    <p class="question">How do self-driving cars use embedded computers?</p>
+    <button onclick="toggleAnswer('answer32')">Show Answer</button>
+    <p id="answer32" class="answer">They use multiple embedded computers along with lasers, sensors, and cameras to safely operate without a driver.</p>
+</div>
+<div>
+    <p class="question">What is the main advantage of cloud storage?</p>
+    <button onclick="toggleAnswer('answer33')">Show Answer</button>
+    <p id="answer33" class="answer">Data stored in the cloud is safe if the user's device is lost and can be accessed from anywhere with an Internet connection.</p>
+</div>
+<div>
+    <p class="question">What are desktop computers typically housed in?</p>
+    <button onclick="toggleAnswer('answer34')">Show Answer</button>
+    <p id="answer34" class="answer">Desktop computers use tower cases, mini-sized cases, or come in all-in-one designs that incorporate the monitor.</p>
+</div>
+<div>
+    <p class="question">Why do businesses use mainframe computers?</p>
+    <button onclick="toggleAnswer('answer35')">Show Answer</button>
+    <p id="answer35" class="answer">Mainframes help businesses handle large amounts of centralized data and process data from smart meters and social networking applications.</p>
+</div>
+
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            if (answer.style.display === "none" || answer.style.display === "") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

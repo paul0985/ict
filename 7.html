@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Q&A</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .question {
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .answer {
+            display: none;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        button {
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <h2>Interactive Question & Answer</h2>
+    
+    <div>
+    <p class="question">What are the basic elements of a communication system?</p>
+    <button onclick="toggleAnswer('answer1')">Show Answer</button>
+    <p id="answer1" class="answer">The basic elements include the medium that carries the message, the sender who creates and sends the message, and the receiver who receives the message.</p>
+</div>
+<div>
+    <p class="question">What does the term transmission mode refer to?</p>
+    <button onclick="toggleAnswer('answer2')">Show Answer</button>
+    <p id="answer2" class="answer">Transmission mode refers to the transmission of information between two communication devices via an interaction channel that indicates the direction of information flow.</p>
+</div>
+<div>
+    <p class="question">What are the three primary types of transmission modes?</p>
+    <button onclick="toggleAnswer('answer3')">Show Answer</button>
+    <p id="answer3" class="answer">The three primary types are simplex, half-duplex, and full-duplex.</p>
+</div>
+<div>
+    <p class="question">What is Simplex transmission mode?</p>
+    <button onclick="toggleAnswer('answer4')">Show Answer</button>
+    <p id="answer4" class="answer">Simplex mode is used for one-way flow of information from sender to receiver, such as in radio and TV transmissions.</p>
+</div>
+<div>
+    <p class="question">What is Half-duplex transmission mode?</p>
+    <button onclick="toggleAnswer('answer5')">Show Answer</button>
+    <p id="answer5" class="answer">Half-duplex mode allows for two-way flow of information, but only one direction at a time, such as in walkie-talkies.</p>
+</div>
+<div>
+    <p class="question">What is Full-duplex transmission mode?</p>
+    <button onclick="toggleAnswer('answer6')">Show Answer</button>
+    <p id="answer6" class="answer">Full-duplex mode allows simultaneous information flow in both directions, as seen in telephone networks.</p>
+</div>
+<div>
+    <p class="question">What is Serial data transmission?</p>
+    <button onclick="toggleAnswer('answer7')">Show Answer</button>
+    <p id="answer7" class="answer">Serial transmission is where bits travel the same path, one after the other.</p>
+</div>
+<div>
+    <p class="question">What is Parallel data transmission?</p>
+    <button onclick="toggleAnswer('answer8')">Show Answer</button>
+    <p id="answer8" class="answer">Parallel transmission is when a group of bits are transmitted at one time, each taking a separate path.</p>
+</div>
+<div>
+    <p class="question">What is Synchronous transmission?</p>
+    <button onclick="toggleAnswer('answer9')">Show Answer</button>
+    <p id="answer9" class="answer">Synchronous transmission organizes data into groups or blocks, transferred at regular intervals, ensuring both devices know when data can be sent and received.</p>
+</div>
+<div>
+    <p class="question">What is Asynchronous transmission?</p>
+    <button onclick="toggleAnswer('answer10')">Show Answer</button>
+    <p id="answer10" class="answer">Asynchronous transmission sends data when ready, using start and stop bits to identify bytes, making it less efficient than synchronous transmission.</p>
+</div>
+<div>
+    <p class="question">What is Isochronous transmission?</p>
+    <button onclick="toggleAnswer('answer11')">Show Answer</button>
+    <p id="answer11" class="answer">Isochronous transmission ensures that data is delivered at specific times, such as when transmitting video and audio data together.</p>
+</div>
+<div>
+    <p class="question">What is the OSI Model?</p>
+    <button onclick="toggleAnswer('answer12')">Show Answer</button>
+    <p id="answer12" class="answer">The OSI Model is a conceptual framework with seven layers designed to standardize and understand network communication.</p>
+</div>
+<div>
+    <p class="question">What are the seven layers of the OSI Model?</p>
+    <button onclick="toggleAnswer('answer13')">Show Answer</button>
+    <p id="answer13" class="answer">The seven layers are: Physical, Data Link, Network, Transport, Session, Presentation, and Application.</p>
+</div>
+<div>
+    <p class="question">What does the Physical Layer do?</p>
+    <button onclick="toggleAnswer('answer14')">Show Answer</button>
+    <p id="answer14" class="answer">The Physical Layer handles the actual physical connection and transmission of raw binary data over a physical medium.</p>
+</div>
+<div>
+    <p class="question">What is the role of the Data Link Layer?</p>
+    <button onclick="toggleAnswer('answer15')">Show Answer</button>
+    <p id="answer15" class="answer">The Data Link Layer is responsible for node-to-node delivery, ensuring error-free data transfer between adjacent nodes.</p>
+</div>
+<div>
+    <p class="question">What does the Network Layer do?</p>
+    <button onclick="toggleAnswer('answer16')">Show Answer</button>
+    <p id="answer16" class="answer">The Network Layer manages logical addressing, routing, and delivery of data packets across different networks.</p>
+</div>
+<div>
+    <p class="question">What is the function of the Transport Layer?</p>
+    <button onclick="toggleAnswer('answer17')">Show Answer</button>
+    <p id="answer17" class="answer">The Transport Layer ensures reliable data transmission, managing segmentation, reassembly, and error checking.</p>
+</div>
+<div>
+    <p class="question">What does the Session Layer manage?</p>
+    <button onclick="toggleAnswer('answer18')">Show Answer</button>
+    <p id="answer18" class="answer">The Session Layer is responsible for establishing, managing, and terminating sessions between applications on different devices.</p>
+</div>
+<div>
+    <p class="question">What is the purpose of the Presentation Layer?</p>
+    <button onclick="toggleAnswer('answer19')">Show Answer</button>
+    <p id="answer19" class="answer">The Presentation Layer translates data between the application layer and the network, managing encryption and formatting.</p>
+</div>
+<div>
+    <p class="question">What does the Application Layer do?</p>
+    <button onclick="toggleAnswer('answer20')">Show Answer</button>
+    <p id="answer20" class="answer">The Application Layer provides the interface for user applications to communicate over the network.</p>
+</div>
+<div>
+    <p class="question">What is Circuit-Switching in data transmission?</p>
+    <button onclick="toggleAnswer('answer21')">Show Answer</button>
+    <p id="answer21" class="answer">Circuit-switching establishes a dedicated path for data transmission between sender and receiver, used in traditional telephone systems.</p>
+</div>
+<div>
+    <p class="question">What is Packet-Switching?</p>
+    <button onclick="toggleAnswer('answer22')">Show Answer</button>
+    <p id="answer22" class="answer">Packet-switching separates messages into packets, which travel independently across the network and are reassembled at the destination.</p>
+</div>
+<div>
+    <p class="question">What is Broadcasting in data transmission?</p>
+    <button onclick="toggleAnswer('answer23')">Show Answer</button>
+    <p id="answer23" class="answer">Broadcasting sends data packets to all nodes on a network, retrieving only by the intended recipient, primarily used in LANs.</p>
+</div>
+<div>
+    <p class="question">What is a Protocol in communication?</p>
+    <button onclick="toggleAnswer('answer24')">Show Answer</button>
+    <p id="answer24" class="answer">A protocol is a set of rules and regulations that allow electronic devices to connect and exchange data.</p>
+</div>
+<div>
+    <p class="question">What is TCP/IP?</p>
+    <button onclick="toggleAnswer('answer25')">Show Answer</button>
+    <p id="answer25" class="answer">TCP/IP stands for Transmission Control Protocol/Internet Protocol, enabling data communication on the internet by breaking data into packets.</p>
+</div>
+<div>
+    <p class="question">What is FTP?</p>
+    <button onclick="toggleAnswer('answer26')">Show Answer</button>
+    <p id="answer26" class="answer">FTP stands for File Transfer Protocol, used for exchanging files between users on the Internet.</p>
+</div>
+<div>
+    <p class="question">What is HTTP?</p>
+    <button onclick="toggleAnswer('answer27')">Show Answer</button>
+    <p id="answer27" class="answer">HTTP stands for Hyper Text Transfer Protocol, used for communication between web browsers and servers.</p>
+</div>
+<div>
+    <p class="question">What is a URL?</p>
+    <button onclick="toggleAnswer('answer28')">Show Answer</button>
+    <p id="answer28" class="answer">A URL (Uniform Resource Locator) is the unique address of a web page or file on the Internet.</p>
+</div>
+<div>
+    <p class="question">What is Ethernet?</p>
+    <button onclick="toggleAnswer('answer29')">Show Answer</button>
+    <p id="answer29" class="answer">Ethernet is the most widely used standard for wired networks, typically used with LANs that have a star topology.</p>
+</div>
+<div>
+    <p class="question">What is Wi-Fi?</p>
+    <button onclick="toggleAnswer('answer30')">Show Answer</button>
+    <p id="answer30" class="answer">Wi-Fi is a family of wireless networking standards used for medium-range wireless communication.</p>
+</div>
+<div>
+    <p class="question">What is IP Addressing?</p>
+    <button onclick="toggleAnswer('answer31')">Show Answer</button>
+    <p id="answer31" class="answer">IP Addressing assigns a unique numerical identifier to each computer on the Internet, formatted as four numbers separated by dots.</p>
+</div>
+<div>
+    <p class="question">What is DNS Addressing?</p>
+    <button onclick="toggleAnswer('answer32')">Show Answer</button>
+    <p id="answer32" class="answer">DNS (Domain Name System) assigns a human-readable name to an IP address, making it easier for users to access websites.</p>
+</div>
+<div>
+    <p class="question">What are the differences between Synchronous and Asynchronous transmission?</p>
+    <button onclick="toggleAnswer('answer33')">Show Answer</button>
+    <p id="answer33" class="answer">Synchronous transmission sends data in blocks at constant intervals, while asynchronous transmission sends data in bytes without synchronization.</p>
+</div>
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            if (answer.style.display === "none" || answer.style.display === "") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

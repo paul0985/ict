@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Q&A</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .question {
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .answer {
+            display: none;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        button {
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <h2>Interactive Question & Answer</h2>
+    
+   <div>
+    <p class="question">What is legacy software?</p>
+    <button onclick="toggleAnswer('answer1')">Show Answer</button>
+    <p id="answer1" class="answer">Legacy software refers to old software that is still performing useful tasks for the community, often developed using earlier programming languages.</p>
+</div>
+<div>
+    <p class="question">What are the attributes of good software?</p>
+    <button onclick="toggleAnswer('answer2')">Show Answer</button>
+    <p id="answer2" class="answer">Good software should be reliable, maintainable, efficient, user-friendly, and scalable.</p>
+</div>
+<div>
+    <p class="question">What is the software process?</p>
+    <button onclick="toggleAnswer('answer3')">Show Answer</button>
+    <p id="answer3" class="answer">The software process describes the activities performed at each stage of a software development project, aiming to develop or evolve software.</p>
+</div>
+<div>
+    <p class="question">What are the generic activities in all software processes?</p>
+    <button onclick="toggleAnswer('answer4')">Show Answer</button>
+    <p id="answer4" class="answer">Generic activities include specification, development, validation, and evolution.</p>
+</div>
+<div>
+    <p class="question">What is the Software Development Life Cycle (SDLC)? </p>
+    <button onclick="toggleAnswer('answer5')">Show Answer</button>
+    <p id="answer5" class="answer">SDLC is a process used by the software industry to design, develop, and test high-quality software that meets or exceeds customer expectations.</p>
+</div>
+<div>
+    <p class="question">What are the stages of SDLC?</p>
+    <button onclick="toggleAnswer('answer6')">Show Answer</button>
+    <p id="answer6" class="answer">The stages include Planning and Requirement Analysis, Defining Requirements, Designing the Product Architecture, Building the Product, Testing the Product, and Deployment and Maintenance.</p>
+</div>
+<div>
+    <p class="question">What happens during the planning and requirement analysis stage?</p>
+    <button onclick="toggleAnswer('answer7')">Show Answer</button>
+    <p id="answer7" class="answer">This stage involves gathering input from customers, conducting feasibility studies, and planning quality assurance requirements and risk identification.</p>
+</div>
+<div>
+    <p class="question">What is an SRS document?</p>
+    <button onclick="toggleAnswer('answer8')">Show Answer</button>
+    <p id="answer8" class="answer">SRS stands for Software Requirement Specification, which documents all product requirements to be designed and developed during the project life cycle.</p>
+</div>
+<div>
+    <p class="question">What is the purpose of a DDS?</p>
+    <button onclick="toggleAnswer('answer9')">Show Answer</button>
+    <p id="answer9" class="answer">DDS stands for Design Document Specification, which proposes and documents design approaches for the product architecture based on the SRS.</p>
+</div>
+<div>
+    <p class="question">What occurs during the building or developing stage of SDLC?</p>
+    <button onclick="toggleAnswer('answer10')">Show Answer</button>
+    <p id="answer10" class="answer">In this stage, the actual product is built, and programming code is generated according to the DDS while following coding guidelines.</p>
+</div>
+<div>
+    <p class="question">How does testing fit into the SDLC?</p>
+    <button onclick="toggleAnswer('answer11')">Show Answer</button>
+    <p id="answer11" class="answer">Testing is an ongoing activity throughout the SDLC, but this stage specifically involves reporting, tracking, fixing, and retesting product defects until quality standards are met.</p>
+</div>
+<div>
+    <p class="question">What happens during deployment and maintenance?</p>
+    <button onclick="toggleAnswer('answer12')">Show Answer</button>
+    <p id="answer12" class="answer">The product is formally released into the market, possibly starting with a limited segment, followed by user acceptance testing and maintenance based on feedback.</p>
+</div>
+<div>
+    <p class="question">What is the Waterfall Model?</p>
+    <button onclick="toggleAnswer('answer13')">Show Answer</button>
+    <p id="answer13" class="answer">The Waterfall Model is a linear software development process where each phase must be completed before the next begins, emphasizing a sequential design approach.</p>
+</div>
+<div>
+    <p class="question">What is the Iterative Model?</p>
+    <button onclick="toggleAnswer('answer14')">Show Answer</button>
+    <p id="answer14" class="answer">The Iterative Model involves repeating phases multiple times, allowing for refinement and enhancement of the software through successive iterations.</p>
+</div>
+<div>
+    <p class="question">What is the Spiral Model?</p>
+    <button onclick="toggleAnswer('answer15')">Show Answer</button>
+    <p id="answer15" class="answer">The Spiral Model combines iterative development with systematic risk assessment, allowing for gradual refinement through repeated cycles.</p>
+</div>
+<div>
+    <p class="question">What is the V-Model?</p>
+    <button onclick="toggleAnswer('answer16')">Show Answer</button>
+    <p id="answer16" class="answer">The V-Model emphasizes verification and validation, where development and testing activities are planned in parallel, forming a V shape.</p>
+</div>
+<div>
+    <p class="question">What is the Big Bang Model?</p>
+    <button onclick="toggleAnswer('answer17')">Show Answer</button>
+    <p id="answer17" class="answer">The Big Bang Model is an informal approach where development starts without a formal process, often leading to unpredictable results and chaos.</p>
+</div>
+<div>
+    <p class="question">What is Agile Model?</p>
+    <button onclick="toggleAnswer('answer18')">Show Answer</button>
+    <p id="answer18" class="answer">The Agile Model emphasizes flexibility and customer satisfaction through iterative progress and adaptive planning, promoting rapid delivery of functional software.</p>
+</div>
+<div>
+    <p class="question">What is Rapid Application Development (RAD)?</p>
+    <button onclick="toggleAnswer('answer19')">Show Answer</button>
+    <p id="answer19" class="answer">RAD is a software development methodology that focuses on rapid prototyping and quick feedback from users to enhance the product iteratively.</p>
+</div>
+<div>
+    <p class="question">What is Prototyping Model?</p>
+    <button onclick="toggleAnswer('answer20')">Show Answer</button>
+    <p id="answer20" class="answer">The Prototyping Model involves creating early versions of the software to gather user feedback and refine requirements before final development.</p>
+</div>
+<div>
+    <p class="question">What is the importance of requirement analysis?</p>
+    <button onclick="toggleAnswer('answer21')">Show Answer</button>
+    <p id="answer21" class="answer">Requirement analysis is crucial as it sets the foundation for the project by defining what the system should do, ensuring alignment with customer needs.</p>
+</div>
+<div>
+    <p class="question">What is the role of stakeholders in the design phase?</p>
+    <button onclick="toggleAnswer('answer22')">Show Answer</button>
+    <p id="answer22" class="answer">Stakeholders review the design proposals in the DDS and provide input based on risk assessment, budget, and time constraints to select the best approach.</p>
+</div>
+<div>
+    <p class="question">Why is testing an ongoing activity in SDLC?</p>
+    <button onclick="toggleAnswer('answer23')">Show Answer</button>
+    <p id="answer23" class="answer">Testing is integrated throughout the SDLC to identify and resolve defects early, ensuring the final product meets quality standards.</p>
+</div>
+<div>
+    <p class="question">What is the outcome of a successful SDLC?</p>
+    <button onclick="toggleAnswer('answer24')">Show Answer</button>
+    <p id="answer24" class="answer">A successful SDLC results in high-quality software that meets or exceeds customer expectations and is delivered on time and within budget.</p>
+</div>
+<div>
+    <p class="question">What standard defines software life-cycle processes?</p>
+    <button onclick="toggleAnswer('answer25')">Show Answer</button>
+    <p id="answer25" class="answer">ISO/IEC 12207 is an international standard that defines all tasks required for developing and maintaining software.</p>
+</div>
+<div>
+    <p class="question">What is the significance of documentation in SDLC?</p>
+    <button onclick="toggleAnswer('answer26')">Show Answer</button>
+    <p id="answer26" class="answer">Documentation ensures clear communication among stakeholders, provides a reference for requirements and designs, and supports future maintenance efforts.</p>
+</div>
+<div>
+    <p class="question">How does feedback influence the SDLC?</p>
+    <button onclick="toggleAnswer('answer27')">Show Answer</button>
+    <p id="answer27" class="answer">Feedback from users and stakeholders is critical for making iterative improvements, validating requirements, and ensuring the software aligns with user expectations.</p>
+</div>
+<div>
+    <p class="question">What is the focus of the maintenance stage in SDLC?</p>
+    <button onclick="toggleAnswer('answer28')">Show Answer</button>
+    <p id="answer28" class="answer">The maintenance stage focuses on updating the software to fix issues, improve performance, and adapt to changing user needs after initial deployment.</p>
+</div>
+<div>
+    <p class="question">What is the goal of risk assessment in SDLC?</p>
+    <button onclick="toggleAnswer('answer29')">Show Answer</button>
+    <p id="answer29" class="answer">The goal of risk assessment is to identify potential issues that could impact the project and develop strategies to mitigate those risks.</p>
+</div>
+<div>
+    <p class="question">What methodologies are related to software development models?</p>
+    <button onclick="toggleAnswer('answer30')">Show Answer</button>
+    <p id="answer30" class="answer">Related methodologies include Agile Model, RAD Model, Rapid Application Development, and Prototyping Models.</p>
+</div>
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            if (answer.style.display === "none" || answer.style.display === "") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Q&A</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .question {
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .answer {
+            display: none;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        button {
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <h2>Interactive Question & Answer</h2>
+    
+    <div>
+    <p class="question">What is digital data representation?</p>
+    <button onclick="toggleAnswer('answer1')">Show Answer</button>
+    <p id="answer1" class="answer">Digital data representation is the process of converting data into a digital format that can be understood and processed by a computer. This involves encoding data using binary digits (0s and 1s).</p>
+</div>
+
+<div>
+    <p class="question">What is a bit?</p>
+    <button onclick="toggleAnswer('answer2')">Show Answer</button>
+    <p id="answer2" class="answer">A bit is the smallest unit of data that a computer can recognize. It can have a value of either 0 or 1.</p>
+</div>
+
+<div>
+    <p class="question">What is a byte?</p>
+    <button onclick="toggleAnswer('answer3')">Show Answer</button>
+    <p id="answer3" class="answer">A byte is a group of 8 bits. It is the basic unit of measurement for data storage, and it is used to represent a single character of text.</p>
+</div>
+
+<div>
+    <p class="question">What are the common prefixes used to measure large quantities of bytes?</p>
+    <button onclick="toggleAnswer('answer4')">Show Answer</button>
+    <p id="answer4" class="answer">Common prefixes include kilobyte (KB), megabyte (MB), gigabyte (GB), terabyte (TB), petabyte (PB), exabyte (EB), zettabyte (ZB), and yottabyte (YB).</p>
+</div>
+
+<div>
+    <p class="question">What is the difference between the decimal and binary numbering systems?</p>
+    <button onclick="toggleAnswer('answer5')">Show Answer</button>
+    <p id="answer5" class="answer">The decimal numbering system uses 10 symbols (0-9) and is based on powers of 10. The binary numbering system uses only two symbols (0 and 1) and is based on powers of 2.</p>
+</div>
+
+<div>
+    <p class="question">What are coding systems for text-based data?</p>
+    <button onclick="toggleAnswer('answer6')">Show Answer</button>
+    <p id="answer6" class="answer">Coding systems for text-based data include ASCII, EBCDIC, and Unicode. These systems represent characters, numbers, and symbols using binary codes.</p>
+</div>
+
+<div>
+    <p class="question">What is ASCII?</p>
+    <button onclick="toggleAnswer('answer7')">Show Answer</button>
+    <p id="answer7" class="answer">ASCII (American Standard Code for Information Interchange) is a 7-bit coding system traditionally used with personal computers to represent text-based data.</p>
+</div>
+
+<div>
+    <p class="question">What is Unicode?</p>
+    <button onclick="toggleAnswer('answer8')">Show Answer</button>
+    <p id="answer8" class="answer">Unicode is a universal coding standard designed to represent text-based data in any language. It uses 8 to 32 bits per character and can represent over one million characters.</p>
+</div>
+
+<div>
+    <p class="question">How is graphics data represented in computers?</p>
+    <button onclick="toggleAnswer('answer9')">Show Answer</button>
+    <p id="answer9" class="answer">Graphics data is represented using bitmapped images, which are made up of a grid of small dots called pixels. The number of bits used to store color data for each pixel determines the number of colors that can be displayed.</p>
+</div>
+
+<div>
+    <p class="question">How is audio data represented in computers?</p>
+    <button onclick="toggleAnswer('answer10')">Show Answer</button>
+    <p id="answer10" class="answer">Audio data must be converted into digital form to be stored or processed by a computer. It is often compressed, such as in MP3 files, to reduce file size and speed up downloads.</p>
+</div>
+
+<div>
+    <p class="question">What is machine language?</p>
+    <button onclick="toggleAnswer('answer11')">Show Answer</button>
+    <p id="answer11" class="answer">Machine language is a binary-based programming language consisting of 0s and 1s that a computer can execute directly. All programs must be translated into machine language to be understood by the computer.</p>
+</div>
+
+<div>
+    <p class="question">What is the system unit?</p>
+    <button onclick="toggleAnswer('answer12')">Show Answer</button>
+    <p id="answer12" class="answer">The system unit is the main case of a computer or mobile device that houses the processing hardware, storage devices, power supply, and cooling hardware.</p>
+</div>
+
+<div>
+    <p class="question">What is a motherboard?</p>
+    <button onclick="toggleAnswer('answer13')">Show Answer</button>
+    <p id="answer13" class="answer">The motherboard is the main circuit board of a computer, located inside the system unit. It connects all computer system components, including the CPU, memory, and storage devices.</p>
+</div>
+
+<div>
+    <p class="question">What is a CPU?</p>
+    <button onclick="toggleAnswer('answer14')">Show Answer</button>
+    <p id="answer14" class="answer">The CPU (Central Processing Unit) is the chip on the motherboard that performs most of the processing for a computer. It is also known as a microprocessor.</p>
+</div>
+
+<div>
+    <p class="question">What is a multi-core CPU?</p>
+    <button onclick="toggleAnswer('answer15')">Show Answer</button>
+    <p id="answer15" class="answer">A multi-core CPU contains multiple processing cores (e.g., dual-core, quad-core) that allow the computer to work on more than one task at a time, improving performance and efficiency.</p>
+</div>
+
+<div>
+    <p class="question">What is the role of a GPU?</p>
+    <button onclick="toggleAnswer('answer16')">Show Answer</button>
+    <p id="answer16" class="answer">The GPU (Graphics Processing Unit) handles the processing needed to display images, animations, and videos on the screen. It can be located on the motherboard or on a separate video graphics board.</p>
+</div>
+
+<div>
+    <p class="question">What is RAM?</p>
+    <button onclick="toggleAnswer('answer17')">Show Answer</button>
+    <p id="answer17" class="answer">RAM (Random Access Memory) is the computer’s main memory, which stores essential parts of the operating system, programs, and data currently in use. It is volatile, meaning its contents are lost when the computer is shut off.</p>
+</div>
+
+<div>
+    <p class="question">What is cache memory?</p>
+    <button onclick="toggleAnswer('answer18')">Show Answer</button>
+    <p id="answer18" class="answer">Cache memory is a special group of very fast memory chips located on or close to the CPU. It stores frequently accessed data to speed up processing.</p>
+</div>
+
+<div>
+    <p class="question">What is ROM?</p>
+    <button onclick="toggleAnswer('answer19')">Show Answer</button>
+    <p id="answer19" class="answer">ROM (Read-Only Memory) is non-volatile memory that stores permanent instructions, such as firmware, which are retrieved by the computer when needed.</p>
+</div>
+
+<div>
+    <p class="question">What is flash memory?</p>
+    <button onclick="toggleAnswer('answer20')">Show Answer</button>
+    <p id="answer20" class="answer">Flash memory is a type of non-volatile memory used for storage in devices like smartphones, digital cameras, and USB drives. It is also used to store firmware in modern computers.</p>
+</div>
+
+<div>
+    <p class="question">What is the purpose of fans and heat sinks in a computer?</p>
+    <button onclick="toggleAnswer('answer21')">Show Answer</button>
+    <p id="answer21" class="answer">Fans and heat sinks help dissipate heat generated by the CPU and other components to prevent overheating and damage.</p>
+</div>
+
+<div>
+    <p class="question">What is an expansion slot?</p>
+    <button onclick="toggleAnswer('answer22')">Show Answer</button>
+    <p id="answer22" class="answer">An expansion slot is a location on the motherboard where expansion cards can be inserted to add additional functionality or connect peripheral devices.</p>
+</div>
+
+<div>
+    <p class="question">What is a bus in a computer?</p>
+    <button onclick="toggleAnswer('answer23')">Show Answer</button>
+    <p id="answer23" class="answer">A bus is an electronic path over which data travels within a computer. It connects the CPU to other components, such as memory and peripheral devices.</p>
+</div>
+
+<div>
+    <p class="question">What is USB?</p>
+    <button onclick="toggleAnswer('answer24')">Show Answer</button>
+    <p id="answer24" class="answer">USB (Universal Serial Bus) is a versatile port that allows up to 127 devices to connect to a computer. USB 3.0 and 3.1 offer faster data transfer speeds compared to earlier versions.</p>
+</div>
+
+<div>
+    <p class="question">What are common ports found on a computer?</p>
+    <button onclick="toggleAnswer('answer25')">Show Answer</button>
+    <p id="answer25" class="answer">Common ports include USB, HDMI, audio, network, and flash memory card slots. These ports allow external devices to connect to the computer.</p>
+</div>
+
+<div>
+    <p class="question">What is Moore’s Law?</p>
+    <button onclick="toggleAnswer('answer26')">Show Answer</button>
+    <p id="answer26" class="answer">Moore’s Law states that the number of transistors on a chip doubles approximately every 18 months, leading to increased processing power and efficiency.</p>
+</div>
+
+<div>
+    <p class="question">What are the main components of a CPU?</p>
+    <button onclick="toggleAnswer('answer27')">Show Answer</button>
+    <p id="answer27" class="answer">The main components of a CPU include the Arithmetic/Logic Unit (ALU), Floating Point Unit (FPU), Control Unit (CU), Prefetch Unit (PU), Decode Unit, and registers.</p>
+</div>
+
+<div>
+    <p class="question">What is the role of the ALU?</p>
+    <button onclick="toggleAnswer('answer28')">Show Answer</button>
+    <p id="answer28" class="answer">The ALU (Arithmetic/Logic Unit) performs arithmetic operations (like addition and subtraction) and logical operations (like comparisons) on integer data.</p>
+</div>
+
+<div>
+    <p class="question">What is the role of the Control Unit (CU)?</p>
+    <button onclick="toggleAnswer('answer29')">Show Answer</button>
+    <p id="answer29" class="answer">The Control Unit coordinates and controls the activities within the CPU, ensuring that instructions are executed in the correct order.</p>
+</div>
+
+<div>
+    <p class="question">What is the system clock?</p>
+    <button onclick="toggleAnswer('answer30')">Show Answer</button>
+    <p id="answer30" class="answer">The system clock is a timing mechanism that synchronizes the operations of the computer. It sends out regular signals (cycles) to all components to keep them in sync.</p>
+</div>
+
+<div>
+    <p class="question">What is the machine cycle?</p>
+    <button onclick="toggleAnswer('answer31')">Show Answer</button>
+    <p id="answer31" class="answer">The machine cycle is the series of operations involved in executing a single machine-level instruction. It consists of four stages: fetch, decode, execute, and store.</p>
+</div>
+
+<div>
+    <p class="question">What is pipelining?</p>
+    <button onclick="toggleAnswer('answer32')">Show Answer</button>
+    <p id="answer32" class="answer">Pipelining is a technique that allows a CPU to begin processing a new instruction before the previous instruction has completed, improving efficiency and speed.</p>
+</div>
+
+<div>
+    <p class="question">What is multiprocessing?</p>
+    <button onclick="toggleAnswer('answer33')">Show Answer</button>
+    <p id="answer33" class="answer">Multiprocessing is the capability of a computer to use multiple processors or cores to process multiple tasks simultaneously, improving performance.</p>
+</div>
+
+<div>
+    <p class="question">What is parallel processing?</p>
+    <button onclick="toggleAnswer('answer34')">Show Answer</button>
+    <p id="answer34" class="answer">Parallel processing is a technique that uses multiple processors or cores to process a single job faster by dividing the task into smaller parts that are processed simultaneously.</p>
+</div>
+
+<div>
+    <p class="question">How can you improve the performance of your computer?</p>
+    <button onclick="toggleAnswer('answer35')">Show Answer</button>
+    <p id="answer35" class="answer">You can improve performance by adding more memory, performing system maintenance, uninstalling unnecessary programs, upgrading hardware components, and optimizing software settings.</p>
+</div>
+
+<div>
+    <p class="question">What are 3D chips?</p>
+    <button onclick="toggleAnswer('answer36')">Show Answer</button>
+    <p id="answer36" class="answer">3D chips are a technology that layers components on top of each other, reducing the surface area required and allowing for more components to be packed into a smaller space.</p>
+</div>
+
+<div>
+    <p class="question">What is virtualization?</p>
+    <button onclick="toggleAnswer('answer37')">Show Answer</button>
+    <p id="answer37" class="answer">Virtualization is a technology that allows multiple operating systems to run on a single physical machine, improving resource utilization and flexibility.</p>
+</div>
+
+<div>
+    <p class="question">What is the role of cooling systems in computers?</p>
+    <button onclick="toggleAnswer('answer38')">Show Answer</button>
+    <p id="answer38" class="answer">Cooling systems, such as fans, heat sinks, and liquid cooling, help dissipate heat generated by the CPU and other components, preventing overheating and ensuring stable performance.</p>
+</div>
+
+<div>
+    <p class="question">What is the difference between single-core and multi-core CPUs?</p>
+    <button onclick="toggleAnswer('answer39')">Show Answer</button>
+    <p id="answer39" class="answer">A single-core CPU has one processing core, while a multi-core CPU has multiple cores that allow it to handle multiple tasks simultaneously, improving performance and efficiency.</p>
+</div>
+
+<div>
+    <p class="question">What is the future of computer processing?</p>
+    <button onclick="toggleAnswer('answer40')">Show Answer</button>
+    <p id="answer40" class="answer">The future of computer processing involves smaller, faster, and more efficient components, such as 3D chips, flexible electronics, and advanced materials like graphene, which will continue to push the limits of performance and energy efficiency.</p>
+</div>
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            if (answer.style.display === "none" || answer.style.display === "") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Q&A</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .question {
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .answer {
+            display: none;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        button {
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <h2>Interactive Question & Answer</h2>
+    
+    <div>
+    <p class="question">What is the Internet?</p>
+    <button onclick="toggleAnswer('answer1')">Show Answer</button>
+    <p id="answer1" class="answer">The Internet is the largest and most well-known computer network, linking millions of computers worldwide.</p>
+</div>
+<div>
+    <p class="question">When was the Internet first developed?</p>
+    <button onclick="toggleAnswer('answer2')">Show Answer</button>
+    <p id="answer2" class="answer">The Internet has operated in one form or another for several decades.</p>
+</div>
+<div>
+    <p class="question">What was ARPANET?</p>
+    <button onclick="toggleAnswer('answer3')">Show Answer</button>
+    <p id="answer3" class="answer">ARPANET was the predecessor of the Internet, created in 1969 and named after the Advanced Research Projects Agency (ARPA), which sponsored its development.</p>
+</div>
+<div>
+    <p class="question">How did ARPANET evolve into the Internet?</p>
+    <button onclick="toggleAnswer('answer4')">Show Answer</button>
+    <p id="answer4" class="answer">It initially connected four supercomputers and eventually evolved into today’s Internet.</p>
+</div>
+<div>
+    <p class="question">Who proposed the World Wide Web?</p>
+    <button onclick="toggleAnswer('answer5')">Show Answer</button>
+    <p id="answer5" class="answer">Tim Berners-Lee proposed the World Wide Web in 1989.</p>
+</div>
+<div>
+    <p class="question">How did the World Wide Web evolve?</p>
+    <button onclick="toggleAnswer('answer6')">Show Answer</button>
+    <p id="answer6" class="answer">It was originally text-based, but the release of the Mosaic browser in 1993 enabled graphical content.</p>
+</div>
+<div>
+    <p class="question">What is Web 2.0?</p>
+    <button onclick="toggleAnswer('answer7')">Show Answer</button>
+    <p id="answer7" class="answer">Web 2.0 refers to the growing number of web-based applications and services, including social networking, RSS feeds, podcasts, blogs, and wikis.</p>
+</div>
+<div>
+    <p class="question">Who owns the Internet?</p>
+    <button onclick="toggleAnswer('answer8')">Show Answer</button>
+    <p id="answer8" class="answer">The Internet and World Wide Web are not owned by any person, business, or organization.</p>
+</div>
+<div>
+    <p class="question">What is Internet2?</p>
+    <button onclick="toggleAnswer('answer9')">Show Answer</button>
+    <p id="answer9" class="answer">Internet2 is a consortium of researchers, educators, and technology leaders dedicated to the development of revolutionary Internet technologies.</p>
+</div>
+<div>
+    <p class="question">What role do Internet Service Providers (ISPs) play?</p>
+    <button onclick="toggleAnswer('answer10')">Show Answer</button>
+    <p id="answer10" class="answer">ISPs provide access to the Internet, typically for a fee, and include most communication and media companies.</p>
+</div>
+<div>
+    <p class="question">What is the role of infrastructure companies in the Internet?</p>
+    <button onclick="toggleAnswer('answer11')">Show Answer</button>
+    <p id="answer11" class="answer">Infrastructure companies own or operate the physical structure of the Internet, including mobile phone companies, cable companies, and satellite Internet providers.</p>
+</div>
+<div>
+    <p class="question">Is the Internet free?</p>
+    <button onclick="toggleAnswer('answer12')">Show Answer</button>
+    <p id="answer12" class="answer">No, most people and businesses pay for Internet access through ISPs, mobile providers, or leased communication lines.</p>
+</div>
+<div>
+    <p class="question">Does any one entity control the Internet?</p>
+    <button onclick="toggleAnswer('answer13')">Show Answer</button>
+    <p id="answer13" class="answer">No, no single group or organization controls the Internet, though governments can regulate its use within their own countries.</p>
+</div>
+<div>
+    <p class="question">Are the Internet and the World Wide Web the same?</p>
+    <button onclick="toggleAnswer('answer14')">Show Answer</button>
+    <p id="answer14" class="answer">No, the Internet is the physical network, while the World Wide Web is a collection of web pages available over the Internet.</p>
+</div>
+<div>
+    <p class="question">What are the three main decisions when setting up Internet access?</p>
+    <button onclick="toggleAnswer('answer15')">Show Answer</button>
+    <p id="answer15" class="answer">Determining the types of devices, the type of connection, and the Internet Service Provider (ISP) to use.</p>
+</div>
+<div>
+    <p class="question">What devices can connect to the Internet?</p>
+    <button onclick="toggleAnswer('answer16')">Show Answer</button>
+    <p id="answer16" class="answer">Personal computers, smartphones, media tablets, gaming devices, and smart televisions.</p>
+</div>
+<div>
+    <p class="question">What is a direct Internet connection?</p>
+    <button onclick="toggleAnswer('answer17')">Show Answer</button>
+    <p id="answer17" class="answer">A direct connection means the device is continually connected to the Internet, usually via broadband.</p>
+</div>
+<div>
+    <p class="question">What is a dial-up connection?</p>
+    <button onclick="toggleAnswer('answer18')">Show Answer</button>
+    <p id="answer18" class="answer">A dial-up connection uses a modem and telephone line, is inexpensive but slow, and does not support broadband speeds.</p>
+</div>
+<div>
+    <p class="question">What is the most widely used home broadband connection?</p>
+    <button onclick="toggleAnswer('answer19')">Show Answer</button>
+    <p id="answer19" class="answer">Cable Internet, which typically offers speeds around 25 Mbps.</p>
+</div>
+<div>
+    <p class="question">How does DSL work?</p>
+    <button onclick="toggleAnswer('answer20')">Show Answer</button>
+    <p id="answer20" class="answer">DSL (Digital Subscriber Line) delivers broadband over telephone lines but requires a DSL modem and proximity to a switching station.</p>
+</div>
+<div>
+    <p class="question">How does satellite Internet work?</p>
+    <button onclick="toggleAnswer('answer21')">Show Answer</button>
+    <p id="answer21" class="answer">It transmits data using a satellite dish and is an option for rural areas, though it is slower and affected by weather.</p>
+</div>
+<div>
+    <p class="question">What is broadband over fiber (BoF)?</p>
+    <button onclick="toggleAnswer('answer22')">Show Answer</button>
+    <p id="answer22" class="answer">It delivers broadband via fiber-optic cables, also called fiber-to-the-premises (FTTP), offering very fast speeds up to 1 Gbps.</p>
+</div>
+<div>
+    <p class="question">What is a Wi-Fi hotspot?</p>
+    <button onclick="toggleAnswer('answer23')">Show Answer</button>
+    <p id="answer23" class="answer">A Wi-Fi hotspot is a public wireless network, which can be free or fee-based.</p>
+</div>
+<div>
+    <p class="question">What are search sites?</p>
+    <button onclick="toggleAnswer('answer24')">Show Answer</button>
+    <p id="answer24" class="answer">Websites designed to help users search for web pages using search engines and databases, such as Google or Bing.</p>
+</div>
+<div>
+    <p class="question">What is keyword searching?</p>
+    <button onclick="toggleAnswer('answer25')">Show Answer</button>
+    <p id="answer25" class="answer">Typing keywords into a search box to locate relevant web pages, called "hits."</p>
+</div>
+<div>
+    <p class="question">What is phrase searching?</p>
+    <button onclick="toggleAnswer('answer26')">Show Answer</button>
+    <p id="answer26" class="answer">Searching for a phrase by typing multiple keywords together, often enclosed in quotation marks for exact matches.</p>
+</div>
+<div>
+    <p class="question">What are search operators?</p>
+    <button onclick="toggleAnswer('answer27')">Show Answer</button>
+    <p id="answer27" class="answer">Special symbols like quotation marks for exact phrases or a hyphen (-) to exclude words from search results.</p>
+</div>
+<div>
+    <p class="question">What is a field search?</p>
+    <button onclick="toggleAnswer('answer28')">Show Answer</button>
+    <p id="answer28" class="answer">A search limited to a specific web characteristic, such as a page title, URL, or website domain.</p>
+</div>
+<div>
+    <p class="question">How can you evaluate search results?</p>
+    <button onclick="toggleAnswer('answer29')">Show Answer</button>
+    <p id="answer29" class="answer">By considering the title, description, author, source, reliability, and date of publication.</p>
+</div>
+<div>
+    <p class="question">What is instant messaging (IM)?</p>
+    <button onclick="toggleAnswer('answer30')">Show Answer</button>
+    <p id="answer30" class="answer">A service that allows users to exchange real-time messages online.</p>
+</div>
+<div>
+    <p class="question">What is VoIP?</p>
+    <button onclick="toggleAnswer('answer31')">Show Answer</button>
+    <p id="answer31" class="answer">Voice over Internet Protocol (VoIP) enables making phone calls over the Internet, such as via Skype.</p>
+</div>
+<div>
+    <p class="question">What is a webinar?</p>
+    <button onclick="toggleAnswer('answer32')">Show Answer</button>
+    <p id="answer32" class="answer">A seminar presented via the Web, often with interactive features.</p>
+</div>
+<div>
+    <p class="question">What is social networking?</p>
+    <button onclick="toggleAnswer('answer33')">Show Answer</button>
+    <p id="answer33" class="answer">Platforms that allow users to connect and share information, such as Facebook and Twitter.</p>
+</div>
+<div>
+    <p class="question">What is online shopping?</p>
+    <button onclick="toggleAnswer('answer34')">Show Answer</button>
+    <p id="answer34" class="answer">Buying products or services over the Internet through e-commerce sites.</p>
+</div>
+<div>
+    <p class="question">What is online banking?</p>
+    <button onclick="toggleAnswer('answer35')">Show Answer</button>
+    <p id="answer35" class="answer">Conducting financial transactions over the Internet.</p>
+</div>
+<div>
+    <p class="question">What is online gaming?</p>
+    <button onclick="toggleAnswer('answer36')">Show Answer</button>
+    <p id="answer36" class="answer">Playing games via the Internet, including web-based and multiplayer games.</p>
+</div>
+<div>
+    <p class="question">What is Internet addiction?</p>
+    <button onclick="toggleAnswer('answer37')">Show Answer</button>
+    <p id="answer37" class="answer">The inability to control excessive Internet use, interfering with daily life.</p>
+</div>
+<div>
+    <p class="question">What is Internet censorship?</p>
+    <button onclick="toggleAnswer('answer38')">Show Answer</button>
+    <p id="answer38" class="answer">The restriction of access to certain online content by governments or organizations.</p>
+</div>
+<div>
+    <p class="question">What is Internet filtering?</p>
+    <button onclick="toggleAnswer('answer39')">Show Answer</button>
+    <p id="answer39" class="answer">Using software to block access to certain websites or content.</p>
+</div>
+<div>
+    <p class="question">What are cookies?</p>
+    <button onclick="toggleAnswer('answer40')">Show Answer</button>
+    <p id="answer40" class="answer">Small files stored on a user's device by a web server to track preferences and activities.</p>
+</div>
+<div>
+    <p class="question">What is spyware?</p>
+    <button onclick="toggleAnswer('answer41')">Show Answer</button>
+    <p id="answer41" class="answer">Malicious software that secretly collects user data without their consent.</p>
+</div>
+<div>
+    <p class="question">How can you protect email privacy?</p>
+    <button onclick="toggleAnswer('answer42')">Show Answer</button>
+    <p id="answer42" class="answer">By using encrypted email services and being aware that ISPs and employers can access email messages.</p>
+</div>
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            if (answer.style.display === "none" || answer.style.display === "") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

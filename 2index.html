@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Sidebar Over Toppr</title>
+    <style>
+        /* Full-page iframe */
+        .custom_iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            border: none;
+            z-index: 1;
+        }
+
+        /* Sidebar */
+        .custom_unique_sidebar_2024 {
+            --unique-sidebar-width: 250px;
+            --unique-sidebar-bg: #2c3e50;
+            --unique-sidebar-color: #fff;
+            --unique-sidebar-hover: #3498db;
+            --unique-trigger-width: 40px;
+            
+            position: fixed;
+            left: -250px;
+            top: 0;
+            height: 100vh;
+            width: var(--unique-sidebar-width);
+            background: var(--unique-sidebar-bg);
+            color: var(--unique-sidebar-color);
+            z-index: 1000;
+            transition: left 0.3s ease;
+        }
+
+        /* Trigger Button */
+        .custom_unique_sidebar_trigger_2024 {
+            position: fixed;
+            left: 20px;
+            top: 300px;
+            width: 40px;
+            height: 40px;
+            background: #04AA6D;
+            color: var(--unique-sidebar-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: left 0.3s, background 0.3s, transform 0.3s, box-shadow 0.3s;
+            z-index: 1100;
+        }
+
+        .custom_unique_sidebar_trigger_2024:hover {
+            background: green;
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Sidebar Active State */
+        .custom_unique_sidebar_2024.active {
+            left: 0;
+        }
+
+        .custom_unique_sidebar_trigger_2024.active {
+            left: 270px;
+        }
+
+        /* Sidebar Content */
+        .custom_unique_sidebar_content_2024 {
+            height: 100%;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .custom_unique_sidebar_header_2024 h2 {
+            margin: 0 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #34f300;
+            font-size: 1.2em;
+        }
+
+        /* Navigation */
+        .custom_unique_sidebar_nav_2024 ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .custom_unique_sidebar_nav_2024 li {
+            margin: 8px 0;
+        }
+
+        .custom_unique_sidebar_nav_2024 a {
+            color: var(--unique-sidebar-color);
+            text-decoration: none;
+            display: block;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .custom_unique_sidebar_nav_2024 a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #34f300;
+        }
+
+        /* Mobile and Tablet Responsiveness */
+        @media (max-width: 768px) {
+            .custom_unique_sidebar_2024 {
+                left: -100%;
+                width: 80%;
+                max-width: 250px;
+            }
+
+            .custom_unique_sidebar_2024.active {
+                left: 0;
+            }
+
+            .custom_unique_sidebar_trigger_2024.active {
+                left: 80%;
+                max-left: 270px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar Trigger Button -->
+    <div class="custom_unique_sidebar_trigger_2024">☰</div>
+
+    <!-- Sidebar -->
+    <div class="custom_unique_sidebar_2024">
+        <div class="custom_unique_sidebar_content_2024">
+            <div class="custom_unique_sidebar_header_2024">
+                <h2>NUTECH LEARNINGS</h2>
+            </div>
+            <nav class="custom_unique_sidebar_nav_2024">
+    <ul>
+        <!-- Change href to actual section links -->
+        <li><a href="home.html">Home Page</a></li>
+        <li><a href="https://you.com" target="contentFrame">Ask Anything</a></li>
+    </ul>
+    <div>
+        <ul>
+            <li><a href="lecture1.html" target="contentFrame">Lec #1</a></li>
+            <li><a href="lec2.html" target="contentFrame">Lec #2</a></li>
+            <li><a href="lec3.html" target="contentFrame">Lec #3</a></li>
+            <li><a href="lec4.html" target="contentFrame">Lec #4</a></li>
+            <li><a href="lec5.html" target="contentFrame">Lec #5</a></li>
+            <li><a href="lec6.html" target="contentFrame">Lec #6</a></li>
+            <li><a href="lec7.html" target="contentFrame">Lec #7</a></li>
+            <li><a href="lec8.html" target="contentFrame">Lec #8</a></li>
+            <li><a href="lec9.html" target="contentFrame">Lec #9</a></li>
+            <li><a href="lec10.html" target="contentFrame">Lec #10</a></li>
+        </ul>
+    </div>
+</nav>
+
+        </div>
+    </div>
+
+    <!-- Iframe to Load Toppr Website -->
+    <iframe class="custom_iframe" name="contentFrame" src="home.html"></iframe>
+
+    <script>
+        const sidebar = document.querySelector('.custom_unique_sidebar_2024');
+        const trigger = document.querySelector('.custom_unique_sidebar_trigger_2024');
+
+        trigger.addEventListener('click', function() {
+            sidebar.classList.toggle('active');
+            trigger.classList.toggle('active');
+        });
+
+        document.addEventListener('click', function(event) {
+            if (!sidebar.contains(event.target) && !trigger.contains(event.target)) {
+                sidebar.classList.remove('active');
+                trigger.classList.remove('active');
+            }
+        });
+
+        // Keep sidebar open when clicking a nav link
+        document.querySelectorAll('.custom_unique_sidebar_nav_2024 a').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent full page reload
+                document.querySelector('.custom_iframe').src = this.href; // Change iframe source
+            });
+        });
+    </script>
+
+</body>
+</html>

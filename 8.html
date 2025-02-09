@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Q&A</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .question {
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .answer {
+            display: none;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        button {
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <h2>Interactive Question & Answer</h2>
+    
+    <div>
+    <p class="question">What is the first problem faced when developing an application?</p>
+    <button onclick="toggleAnswer('answer1')">Show Answer</button>
+    <p id="answer1" class="answer">The first problem is that programming languages do not include libraries to create User Interfaces, requiring the use of a framework to access the OS layer.</p>
+</div>
+<div>
+    <p class="question">What technologies are essential for web development?</p>
+    <button onclick="toggleAnswer('answer2')">Show Answer</button>
+    <p id="answer2" class="answer">Essential technologies include HTML for document structure, CSS for visual aspects, and JavaScript for interactivity.</p>
+</div>
+<div>
+    <p class="question">What tools are needed to start web development?</p>
+    <button onclick="toggleAnswer('answer3')">Show Answer</button>
+    <p id="answer3" class="answer">You need a good web browser (like Chrome or Firefox), a text editor (such as VSCode, Notepad++, or Sublime Text), and example HTML code to start.</p>
+</div>
+<div>
+    <p class="question">What does HTML stand for?</p>
+    <button onclick="toggleAnswer('answer4')">Show Answer</button>
+    <p id="answer4" class="answer">HTML stands for Hyper Text Markup Language, which defines the structure of a document or website.</p>
+</div>
+<div>
+    <p class="question">Is HTML a programming language?</p>
+    <button onclick="toggleAnswer('answer5')">Show Answer</button>
+    <p id="answer5" class="answer">No, HTML is a markup language, not a programming language; its purpose is to give structure to the content of a website.</p>
+</div>
+<div>
+    <p class="question">What is the Document Object Model (DOM)?</p>
+    <button onclick="toggleAnswer('answer6')">Show Answer</button>
+    <p id="answer6" class="answer">The DOM is a tree-like structure that represents the HTML document, where each node can have one parent and several children.</p>
+</div>
+<div>
+    <p class="question">What is the purpose of the <code>&lt;div&gt;</code> tag in HTML?</p>
+    <button onclick="toggleAnswer('answer7')">Show Answer</button>
+    <p id="answer7" class="answer">The <code>&lt;div&gt;</code> tag is a container used to represent a rectangular area with information inside, often used for layout purposes.</p>
+</div>
+<div>
+    <p class="question">What does CSS stand for?</p>
+    <button onclick="toggleAnswer('answer8')">Show Answer</button>
+    <p id="answer8" class="answer">CSS stands for Cascading Style Sheets, which is used to specify how to present the document information stored in HTML.</p>
+</div>
+<div>
+    <p class="question">What are some common CSS properties?</p>
+    <button onclick="toggleAnswer('answer9')">Show Answer</button>
+    <p id="answer9" class="answer">Common CSS properties include color, background-color, margin, padding, width, height, and text-align.</p>
+</div>
+<div>
+    <p class="question">How can CSS rules be added to a website?</p>
+    <button onclick="toggleAnswer('answer10')">Show Answer</button>
+    <p id="answer10" class="answer">CSS rules can be added by inserting code inside a <code>&lt;style&gt;</code> tag, referencing an external CSS file with a <code>&lt;link&gt;</code> tag, or using the style attribute on an HTML tag.</p>
+</div>
+<div>
+    <p class="question">What is Flexbox in CSS?</p>
+    <button onclick="toggleAnswer('answer11')">Show Answer</button>
+    <p id="answer11" class="answer">Flexbox is a layout model that allows arranging elements in one direction (vertically or horizontally) easily.</p>
+</div>
+<div>
+    <p class="question">What is the purpose of the <code>&lt;script&gt;</code> tag in HTML?</p>
+    <button onclick="toggleAnswer('answer12')">Show Answer</button>
+    <p id="answer12" class="answer">The <code>&lt;script&gt;</code> tag is used to embed or reference JavaScript code in an HTML document, allowing for interactivity on the web page.</p>
+</div>
+<div>
+    <p class="question">What is JavaScript?</p>
+    <button onclick="toggleAnswer('answer13')">Show Answer</button>
+    <p id="answer13" class="answer">JavaScript is a programming language used to add interactivity to web pages, allowing dynamic content changes without reloading the page.</p>
+</div>
+<div>
+    <p class="question">How can elements be retrieved from the DOM in JavaScript?</p>
+    <button onclick="toggleAnswer('answer14')">Show Answer</button>
+    <p id="answer14" class="answer">Elements can be retrieved using document selectors, such as <code>document.querySelector()</code> or <code>document.getElementById()</code>.</p>
+</div>
+<div>
+    <p class="question">What is the purpose of event listeners in JavaScript?</p>
+    <button onclick="toggleAnswer('answer15')">Show Answer</button>
+    <p id="answer15" class="answer">Event listeners are used to execute functions in response to specific actions performed by the user, such as clicking a button or pressing a key.</p>
+</div>
+<div>
+    <p class="question">What does the <code>parseFloat()</code> method do in JavaScript?</p>
+    <button onclick="toggleAnswer('answer16')">Show Answer</button>
+    <p id="answer16" class="answer">The <code>parseFloat()</code> method parses a value as a string and returns the first floating-point number found in the string.</p>
+</div>
+<div>
+    <p class="question">What is the function of the <code>&lt;input&gt;</code> tag?</p>
+    <button onclick="toggleAnswer('answer17')">Show Answer</button>
+    <p id="answer17" class="answer">The <code>&lt;input&gt;</code> tag is used to create input fields where users can enter data, such as text, passwords, or checkboxes.</p>
+</div>
+<div>
+    <p class="question">How do you change the content of an HTML element using JavaScript?</p>
+    <button onclick="toggleAnswer('answer18')">Show Answer</button>
+    <p id="answer18" class="answer">You can change the content using the <code>innerHTML</code> property, like this: <code>element.innerHTML = 'New Content';</code></p>
+</div>
+<div>
+    <p class="question">What is the purpose of comments in JavaScript?</p>
+    <button onclick="toggleAnswer('answer19')">Show Answer</button>
+    <p id="answer19" class="answer">Comments are used to annotate code for better understanding and documentation; they are ignored during execution.</p>
+</div>
+<div>
+    <p class="question">What is the difference between <code>var</code>, <code>let</code>, and <code>const</code> in JavaScript?</p>
+    <button onclick="toggleAnswer('answer20')">Show Answer</button>
+    <p id="answer20" class="answer">var declares a variable that is function-scoped, <code>let</code> declares a block-scoped variable, and <code>const</code> declares a block-scoped constant that cannot be reassigned.</p>
+</div>
+<div>
+    <p class="question">What does the <code>addEventListener()</code> method do?</p>
+    <button onclick="toggleAnswer('answer21')">Show Answer</button>
+    <p id="answer21" class="answer">The <code>addEventListener()</code> method attaches an event handler to an element, allowing it to respond to specified events, like clicks or keyboard actions.</p>
+</div>
+<div>
+    <p class="question">What is an example of a JavaScript function?</p>
+    <button onclick="toggleAnswer('answer22')">Show Answer</button>
+    <p id="answer22" class="answer">An example is: <code>function sayHello() { alert('Hello!'); }</code></p>
+</div>
+<div>
+    <p class="question">How can you clear the text inside an input field using JavaScript?</p>
+    <button onclick="toggleAnswer('answer23')">Show Answer</button>
+    <p id="answer23" class="answer">You can clear it by setting the value property to an empty string: <code>myInputElement.value = '';</code></p>
+</div>
+<div>
+    <p class="question">What is the purpose of the <code>alert()</code> function in JavaScript?</p>
+    <button onclick="toggleAnswer('answer24')">Show Answer</button>
+    <p id="answer24" class="answer">The <code>alert()</code> function displays a popup message to the user, often used for notifications or warnings.</p>
+</div>
+<div>
+    <p class="question">What is a radio button in HTML?</p>
+    <button onclick="toggleAnswer('answer25')">Show Answer</button>
+    <p id="answer25" class="answer">A radio button is an input element that allows users to select one option from a set of predefined options.</p>
+</div>
+<div>
+    <p class="question">What is a checkbox in HTML?</p>
+    <button onclick="toggleAnswer('answer26')">Show Answer</button>
+    <p id="answer26" class="answer">A checkbox is an input element that allows users to select one or more options from a set of choices.</p>
+</div>
+<div>
+    <p class="question">What is the purpose of the function <code>myfunction()</code> in the JavaScript example?</p>
+    <button onclick="toggleAnswer('answer27')">Show Answer</button>
+    <p id="answer27" class="answer">The function <code>myfunction()</code> is called when the button is clicked and displays a popup alert with the message "button clicked!".</p>
+</div>
+<div>
+    <p class="question">What should be included in the HTML file to link to a CSS file?</p>
+    <button onclick="toggleAnswer('answer28')">Show Answer</button>
+    <p id="answer28" class="answer">You should include the <code>&lt;link&gt;</code> tag with the href attribute specifying the CSS file, like this: <code>&lt;link href="style.css" rel="stylesheet" /&gt;</code>.</p>
+</div>
+<div>
+    <p class="question">What are the input types available in HTML?</p>
+    <button onclick="toggleAnswer('answer29')">Show Answer</button>
+    <p id="answer29" class="answer">Common input types include text, password, email, number, radio, and checkbox.</p>
+</div>
+<div>
+    <p class="question">What is the significance of the <code>parseInt()</code> method?</p>
+    <button onclick="toggleAnswer('answer30')">Show Answer</button>
+    <p id="answer30" class="answer">The <code>parseInt()</code> method parses a value as a string and returns the first integer found in the string, helping in number conversions.</p>
+</div>
+
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            if (answer.style.display === "none" || answer.style.display === "") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

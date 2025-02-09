@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Q&A</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .question {
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .answer {
+            display: none;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        button {
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <h2>Interactive Question & Answer</h2>
+    
+   <div>
+    <p class="question">What is a network?</p>
+    <button onclick="toggleAnswer('answer1')">Show Answer</button>
+    <p id="answer1" class="answer">A network is a connected system of objects or people, specifically a computer network that connects devices to share hardware, software, and data and facilitate communication.</p>
+</div>
+<div>
+    <p class="question">What are some uses for computer networks?</p>
+    <button onclick="toggleAnswer('answer2')">Show Answer</button>
+    <p id="answer2" class="answer">Uses include sharing an Internet connection, application software, printers, facilitating VoIP, email, videoconferencing, collaborating on documents, exchanging files, and connecting devices in homes.</p>
+</div>
+<div>
+    <p class="question">What are networking applications?</p>
+    <button onclick="toggleAnswer('answer3')">Show Answer</button>
+    <p id="answer3" class="answer">Networking applications are tools or software that use internet connections to provide services like communication, file sharing, and remote access, essential in various sectors like business and education.</p>
+</div>
+<div>
+    <p class="question">What types of communication applications are there?</p>
+    <button onclick="toggleAnswer('answer4')">Show Answer</button>
+    <p id="answer4" class="answer">Types include email (e.g., Gmail), instant messaging (e.g., WhatsApp), and video conferencing (e.g., Zoom), each utilizing specific protocols for data exchange.</p>
+</div>
+<div>
+    <p class="question">What is the Client-Server model?</p>
+    <button onclick="toggleAnswer('answer5')">Show Answer</button>
+    <p id="answer5" class="answer">The Client-Server model involves centralized servers providing services to clients, facilitating resource access and communication.</p>
+</div>
+<div>
+    <p class="question">What is a Peer-to-Peer (P2P) network?</p>
+    <button onclick="toggleAnswer('answer6')">Show Answer</button>
+    <p id="answer6" class="answer">A Peer-to-Peer (P2P) network allows direct file sharing among users without centralized servers.</p>
+</div>
+<div>
+    <p class="question">What is a Virtual Private Network (VPN)?</p>
+    <button onclick="toggleAnswer('answer7')">Show Answer</button>
+    <p id="answer7" class="answer">A VPN creates a secure connection over the internet, enabling encrypted data transfer between remote users and a private network.</p>
+</div>
+<div>
+    <p class="question">What are common uses of VPNs?</p>
+    <button onclick="toggleAnswer('answer8')">Show Answer</button>
+    <p id="answer8" class="answer">Common uses include secure browsing on public Wi-Fi, remote access to work networks, and bypassing regional restrictions for content access.</p>
+</div>
+<div>
+    <p class="question">What are key characteristics of networks?</p>
+    <button onclick="toggleAnswer('answer9')">Show Answer</button>
+    <p id="answer9" class="answer">Key characteristics include scalability, security (data encryption, authentication), topology, cost-effectiveness, and availability of services.</p>
+</div>
+<div>
+    <p class="question">What is the difference between Bandwidth and Latency?</p>
+    <button onclick="toggleAnswer('answer10')">Show Answer</button>
+    <p id="answer10" class="answer">Bandwidth is the amount of data transmitted over a network in a given time, while latency is the delay in data transmission; lower latency is preferred for real-time applications.</p>
+</div>
+<div>
+    <p class="question">What is network topology?</p>
+    <button onclick="toggleAnswer('answer11')">Show Answer</button>
+    <p id="answer11" class="answer">Network topology refers to the physical or logical arrangement of devices and connections in a network, affecting performance, reliability, and scalability.</p>
+</div>
+<div>
+    <p class="question">What is Point-to-Point topology?</p>
+    <button onclick="toggleAnswer('answer12')">Show Answer</button>
+    <p id="answer12" class="answer">Point-to-point topology is a simple communication setup between two nodes, providing high bandwidth but limited scalability.</p>
+</div>
+<div>
+    <p class="question">What are the advantages of Star topology?</p>
+    <button onclick="toggleAnswer('answer13')">Show Answer</button>
+    <p id="answer13" class="answer">Advantages include easy installation, management, and troubleshooting, as well as good scalability for adding new devices.</p>
+</div>
+<div>
+    <p class="question">What is Ring topology?</p>
+    <button onclick="toggleAnswer('answer14')">Show Answer</button>
+    <p id="answer14" class="answer">Ring topology connects devices in a closed loop, where data travels in one direction, and is managed through methods like token passing.</p>
+</div>
+<div>
+    <p class="question">What is Mesh topology?</p>
+    <button onclick="toggleAnswer('answer15')">Show Answer</button>
+    <p id="answer15" class="answer">In a mesh topology, each device is connected to every other device, providing multiple pathways for data, thus enhancing reliability.</p>
+</div>
+<div>
+    <p class="question">What is Tree topology?</p>
+    <button onclick="toggleAnswer('answer16')">Show Answer</button>
+    <p id="answer16" class="answer">Tree topology combines elements of star and bus topologies, connecting groups of star-configured devices to a central backbone.</p>
+</div>
+<div>
+    <p class="question">What is a Local Area Network (LAN)?</p>
+    <button onclick="toggleAnswer('answer17')">Show Answer</button>
+    <p id="answer17" class="answer">A LAN connects devices within a limited area, such as a single building or campus, and is characterized by high-speed data transfer rates.</p>
+</div>
+<div>
+    <p class="question">What is a Personal Area Network (PAN)?</p>
+    <button onclick="toggleAnswer('answer18')">Show Answer</button>
+    <p id="answer18" class="answer">A PAN is a small network used for connecting devices close to an individual, typically within a few meters, like connecting a smartphone to a laptop via Bluetooth.</p>
+</div>
+<div>
+    <p class="question">What is a Metropolitan Area Network (MAN)?</p>
+    <button onclick="toggleAnswer('answer19')">Show Answer</button>
+    <p id="answer19" class="answer">A MAN spans a city or large campus, connecting multiple LANs and often using fiber-optic cables for high-speed connectivity.</p>
+</div>
+<div>
+    <p class="question">What is a Wide Area Network (WAN)?</p>
+    <button onclick="toggleAnswer('answer20')">Show Answer</button>
+    <p id="answer20" class="answer">A WAN covers a large geographic area, connecting multiple LANs and MANs, often using leased telecommunications lines or satellite links.</p>
+</div>
+<div>
+    <p class="question">What is the significance of network scalability?</p>
+    <button onclick="toggleAnswer('answer21')">Show Answer</button>
+    <p id="answer21" class="answer">Scalability refers to the ability to expand the network by adding more devices or resources without negatively impacting performance.</p>
+</div>
+<div>
+    <p class="question">What are the advantages of using encryption in networking?</p>
+    <button onclick="toggleAnswer('answer22')">Show Answer</button>
+    <p id="answer22" class="answer">Encryption protects data during transfer, ensuring privacy and security from unauthorized access during communication.</p>
+</div>
+<div>
+    <p class="question">What is the role of a switch in a network?</p>
+    <button onclick="toggleAnswer('answer23')">Show Answer</button>
+    <p id="answer23" class="answer">A switch connects multiple devices in a network and intelligently directs data to the specific device it's intended for, operating at the Data Link Layer of the OSI model.</p>
+</div>
+<div>
+    <p class="question">What is the purpose of a hub in networking?</p>
+    <button onclick="toggleAnswer('answer24')">Show Answer</button>
+    <p id="answer24" class="answer">A hub connects multiple devices and broadcasts data to all connected devices, operating at the Physical Layer of the OSI model.</p>
+</div>
+<div>
+    <p class="question">What is token passing in ring topology?</p>
+    <button onclick="toggleAnswer('answer25')">Show Answer</button>
+    <p id="answer25" class="answer">Token passing is a network access method where a token circulates around the network, granting permission to send data to the device holding the token.</p>
+</div>
+<div>
+    <p class="question">What are the disadvantages of a mesh topology?</p>
+    <button onclick="toggleAnswer('answer26')">Show Answer</button>
+    <p id="answer26" class="answer">Mesh topology can be expensive and complex to install due to extensive cabling and connection points, making maintenance challenging.</p>
+</div>
+<div>
+    <p class="question">How does a VPN enhance security?</p>
+    <button onclick="toggleAnswer('answer27')">Show Answer</button>
+    <p id="answer27" class="answer">A VPN enhances security by creating an encrypted tunnel for data transfer, protecting it from eavesdropping and unauthorized access over the internet.</p>
+</div>
+
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            if (answer.style.display === "none" || answer.style.display === "") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
